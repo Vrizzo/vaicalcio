@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/GoKickBackOffice" reloadable="true">
+    <Resource auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              initialSize="5"
+              maxActive="400"
+              maxIdle="-1"
+              maxWait="2000"
+              minEvictableIdleTimeMillis="1000000"
+              name="jdbc/devel"
+              testOnBorrow="false"
+              testWhileIdle="true"
+              timeBetweenEvictionRunsMillis="-1"
+              type="javax.sql.DataSource"
+              validationQuery="SELECT 1"
+              url="jdbc:mysql://172.16.1.2:3306/GoKick?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+              username="root"
+              password=""/>
+    <Realm className="org.apache.catalina.realm.MemoryRealm"
+           pathname="E:/ProjectsJava/GoKick/trunk/BackOffice/environment/devel/user.xml"/>
+</Context>
+
+
