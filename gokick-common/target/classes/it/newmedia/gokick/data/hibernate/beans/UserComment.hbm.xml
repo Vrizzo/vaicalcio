@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="USER_COMMENTS" name="it.newmedia.gokick.data.hibernate.beans.UserComment">
+    <id unsaved-value="null" name="id" column="ID_USER_COMMENT">
+      <generator class="native"/>
+    </id>
+    <property name="idUser" column="ID_USER"/>
+    <property name="textDetail" column="TEXT_DETAIL"/>
+    <property name="tech" column="TECH"/>
+    <property name="reliability" column="RELIABILITY"/>
+    <property name="fairplay" column="FAIRPLAY"/>
+    <property name="approved" column="APPROVED"/>
+    <property name="deleted" column="DELETED"/>
+    <property name="created" column="CREATED"/>
+    <many-to-one column="ID_USER_AUTHOR" cascade="none" outer-join="true" class="it.newmedia.gokick.data.hibernate.beans.User" lazy="false" not-null="false" name="userAuthor"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+  <!-- APPENDERS -->
+  <appender name="application" class="org.apache.log4j.RollingFileAppender" >
+    <param name="File" value="${root-log}social.log"/>
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="1MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%-5p %d (%F:%L) [%M] %m%n" />
+    </layout>
+  </appender>
+
+  <!-- LOGGERS -->
+
+  <logger name="it.newmedia" additivity="false">
+    <level value="debug"/>
+    <appender-ref ref="application"/>
+  </logger>
+
+  <root>
+    <priority value="error"/>
+    <appender-ref ref="application"/>
+  </root>
+
+</log4j:configuration>

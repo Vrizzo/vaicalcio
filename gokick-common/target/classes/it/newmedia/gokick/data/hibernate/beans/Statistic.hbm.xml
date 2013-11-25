@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="STATISTICS" name="it.newmedia.gokick.data.hibernate.beans.Statistic">
+    <id unsaved-value="null" name="id" column="ID_STATISTIC">
+      <generator class="native"/>
+    </id>
+    <property name="refDate" column="REF_DATE"/>
+    <many-to-one column="ID_USER" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.User" lazy="false" not-null="false" name="user"/>
+    <property name="allMissing" column="ALL_MISSING"/>
+    <property name="goalsTot" column="GOALS_TOT"/>
+    <property name="ownGoalsTot" column="OWN_GOALS_TOT"/>
+    <property name="matchTot" column="MATCH_TOT"/>
+    <property name="challangeTot" column="CHALLANGE_TOT"/>
+    <property name="matchOwner" column="MATCH_OWNER"/>
+    <property name="matchRecorded" column="MATCH_RECORDED"/>
+    <property name="challangeOwner" column="CHALLANGE_OWNER"/>
+    <property name="challangeRecorded" column="CHALLANGE_RECORDED"/>
+    <property name="voteTot" column="VOTE_TOT"/>
+    <property name="voteNum" column="VOTE_NUM"/>
+    <property name="challangeDraw" column="CHALLANGE_DRAW"/>
+    <property name="challangeLose" column="CHALLANGE_LOSE"/>
+    <property name="challangeWin" column="CHALLANGE_WIN"/>
+    <property name="matchDraw" column="MATCH_DRAW"/>
+    <property name="matchLose" column="MATCH_LOSE"/>
+    <property name="matchWin" column="MATCH_WIN"/>
+  </class>
+</hibernate-mapping>

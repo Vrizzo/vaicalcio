@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  
+  <!-- APPENDERS --> 
+
+  <!-- application appender -->
+  <appender name="application" class="org.apache.log4j.RollingFileAppender" >
+    <param name="File" value="/var/log/extra/gokick/website.log"/>
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="1MB"/>
+    <param name="MaxBackupIndex" value="10"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%-5p %d (%F:%L) [%M] %m%n"/>
+    </layout>
+  </appender>
+
+  <!-- LOGGERS -->
+        
+  <logger name="it.newmedia.gokick" additivity="false">
+    <level value="debug"/>
+    <appender-ref ref="application"/>
+  </logger>
+
+
+  <root>
+    <priority value="error" />
+    <appender-ref ref="application" />
+  </root>
+  
+</log4j:configuration>

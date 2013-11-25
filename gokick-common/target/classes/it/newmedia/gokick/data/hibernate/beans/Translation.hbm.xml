@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="TRANSLATIONS" name="it.newmedia.gokick.data.hibernate.beans.Translation">
+    <id unsaved-value="null" name="id" column="ID_TRANSLATION">
+      <generator class="native"/>
+    </id>
+    <property name="language" column="LANGUAGE"/>
+    <property name="translationType" column="TRANSLATION_TYPE"/>
+    <property name="keyName" column="KEY_NAME"/>
+    <property name="keyValue" column="KEY_VALUE"/>
+    <property name="replacementEnabled" column="REPLACEMENT_ENABLED"/>
+    <property name="htmlEnabled" column="HTML_ENABLED"/>
+  </class>
+</hibernate-mapping>

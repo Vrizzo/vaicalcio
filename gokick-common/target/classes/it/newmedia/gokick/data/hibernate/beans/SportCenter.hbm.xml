@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="SPORTS_CENTERS" name="it.newmedia.gokick.data.hibernate.beans.SportCenter">
+    <id unsaved-value="null" name="id" column="ID_SPORTS_CENTER">
+      <generator class="native"/>
+    </id>
+    <property name="address" column="ADDRESS"/>
+    <property name="cap" column="CAP"/>
+    <property name="changed" column="CHANGED"/>
+    <many-to-one column="ID_CITY" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.City" lazy="proxy" not-null="false" name="city"/>
+    <property name="conventionFrom" column="CONVENTION_FROM"/>
+    <property name="conventionTo" column="CONVENTION_TO"/>
+    <many-to-one column="ID_COUNTRY" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.Country" lazy="proxy" not-null="false" name="country"/>
+    <property name="created" column="CREATED"/>
+    <property name="description" column="DESCRIPTION"/>
+    <property name="email" column="EMAIL"/>
+    <property name="latitude" column="LATITUDE"/>
+    <property name="longitude" column="LONGITUDE"/>
+    <property name="enabled" column="ENABLED"/>
+    <property name="name" column="NAME"/>
+    <property name="promo" column="PROMO"/>
+    <many-to-one column="ID_PROVINCE" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.Province" lazy="proxy" not-null="false" name="province"/>
+    <property name="telephone" column="TELEPHONE"/>
+    <property name="transports" column="TRANSPORTS"/>
+    <property name="approved" column="APPROVED"/>
+    <many-to-one column="ID_USER_AUTHOR" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.User" lazy="proxy" not-null="true" name="userAuthor"/>
+    <property name="webSite" column="WEB_SITE"/>
+    <set inverse="true" outer-join="true" lazy="true" name="pitchList">
+      <key column="ID_SPORTS_CENTER"/>
+      <one-to-many class="it.newmedia.gokick.data.hibernate.beans.Pitch"/>
+    </set>
+    <set lazy="true" name="matchList">
+      <key column="ID_SPORTS_CENTER"/>
+      <one-to-many class="it.newmedia.gokick.data.hibernate.beans.Match"/>
+    </set>
+  </class>
+</hibernate-mapping>

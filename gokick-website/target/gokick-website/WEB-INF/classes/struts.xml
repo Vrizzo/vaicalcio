@@ -1,0 +1,674 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+  <constant name="struts.devMode" value="false" />
+  <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+  <constant name="struts.i18n.encoding" value="UTF-8"/>
+
+  <constant name="format.time" value="{0,time}" />
+  <constant name="format.number" value="{0,number,#0.0##}" />
+  <constant name="format.percent" value="{0,number,##0.00'%'}" />
+  <constant name="format.money" value="{0,number,##0.00}" />
+ 
+  <!-- Limite massimo per il quale può essere fatto l'upload di un file (in byte) -->
+  <constant name="struts.multipart.maxSize" value="20000000" />
+
+  <constant name="struts.ui.theme" value="gokick" />
+  <constant name="struts.ui.templateDir" value="template" />
+
+  <package name="default" extends="struts-default">
+
+    <interceptors>
+      <interceptor name="rememberMeInterceptor" class="it.newmedia.gokick.site.web.interceptors.RememberMeInterceptor"/>
+      <interceptor name="hibernateSessionInterceptor" class="it.newmedia.gokick.site.web.interceptors.HibernateSessionInterceptor"/>
+      <interceptor name="appStaticParams" class="com.opensymphony.xwork2.interceptor.StaticParametersInterceptor"/>
+      <interceptor name="cobrandInterceptor" class="it.newmedia.gokick.site.web.interceptors.CobrandInterceptor"/>
+      <interceptor name="authenticationInterceptor" class="it.newmedia.gokick.site.web.interceptors.AuthenticationInterceptor"/>
+
+      <interceptor-stack name="appDefaultStack">
+        <interceptor-ref name="hibernateSessionInterceptor"/>
+        <interceptor-ref name="appStaticParams"/>
+        <interceptor-ref name="cobrandInterceptor"/>
+        <interceptor-ref name="rememberMeInterceptor"/>
+        <interceptor-ref name="authenticationInterceptor"/>
+        <interceptor-ref name="defaultStack"/>
+      </interceptor-stack>
+    </interceptors>
+
+    <default-interceptor-ref name="appDefaultStack"/>
+
+    <global-results >
+      <result name="error" >/jsp/error.jsp</result>
+      <result name="errorPopup" >/jsp/errorPopup.jsp</result>
+      <result name="exception" >/jsp/exception.jsp</result>
+      <result name="login" type="redirectAction">
+        <param name="actionName">login</param>
+      </result>
+      <result name="home" type="redirectAction">
+        <param name="actionName">home</param>
+      </result>
+      <result name="goToUrl" type="redirect">${goToUrl}</result>
+
+    </global-results>
+
+    <global-exception-mappings>
+      <exception-mapping exception="java.lang.Exception" result="exception"/>
+    </global-exception-mappings>
+
+    
+    <!--    HOME    -->
+    <action name="home" class="it.newmedia.gokick.site.web.actions.HomeAction">
+      <result name="loggedIn">/jsp/homeLoggedIn.jsp</result>
+      <result name="notLoggedIn">/jsp/home.jsp</result>
+    </action>
+
+    <!--    START FACEBOOK    -->
+    <action name="facebookLogin" method="facebookLogin" class="it.newmedia.gokick.site.web.actions.social.FacebookAction">
+      <param name="authenticationRequired">False</param>
+      <result name="dialogUrl" type="redirect">${dialogUrl}</result>
+      <result name="returnOnSite">/jsp/facebookPopupReturn.jsp</result>
+      <result name="error">/jsp/error.jsp</result>
+    </action>
+  
+    <action name="facebookRegistration" class="it.newmedia.gokick.site.web.actions.social.FacebookAction">
+      <result>/jsp/facebookRegistration.jsp</result>
+
+
+
+
+
+    </action>
+    
+    <action name="doFacebookRegistration" class="it.newmedia.gokick.site.web.actions.user.UserLoginAction">
+      <result name="input">/jsp/facebookRegistration.jsp</result>
+      <!--result>/jsp/homeLoggedIn.jsp</result-->
+      <result name="success" type="redirectAction">
+        <param name="actionName">home</param>
+      </result>
+    </action>
+    <!--    END FACEBOOK    -->
+
+    <!-- LOGIN -->
+    <action name="login" class="it.newmedia.gokick.site.web.actions.user.UserLoginAction">
+      <result name="input">/jsp/home.jsp</result>
+      <!--result>/jsp/homeLoggedIn.jsp</result-->
+      <result name="success" type="redirectAction">
+        <!--<param name="actionName">home</param>-->
+        <param name="actionName">calendar!viewCalendar</param>
+        <param name="defaultSearch">true</param>
+      </result>
+    </action>
+
+    <!-- LOGIN FROM BACKOFFICE -->
+    <action name="backOfficeLogin" class="it.newmedia.gokick.site.web.actions.user.BackOfficeLoginAction">
+      <param name="authenticationRequired">False</param>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${errorCode}</param>
+      </result>
+    </action>
+
+    <!-- LOGOUT -->
+    <action name="logout" class="it.newmedia.gokick.site.web.actions.user.UserLogoutAction">
+      <result type="redirectAction">home</result>
+    </action>
+
+    <!-- USER PREFERENCES    -->
+    <action name="userPreferences!*" class="it.newmedia.gokick.site.web.actions.user.UserPreferencesAction" method="{1}" >
+      <result name="success" >/jsp/userPreferences.jsp</result>
+      <result name="input">/jsp/userPreferences.jsp</result>
+      <result >/jsp/userPreferences.jsp</result>
+    </action>
+
+    <!-- USER REGISTRATION INTRO   -->
+    <action name="userIntro" class="it.newmedia.gokick.site.web.actions.user.UserIntroAction" >
+      <result>/jsp/userIntro.jsp</result>
+      <result name="error" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${invitationErrorCode}</param>
+      </result>
+    </action>
+
+    <!-- USER REGISTER FINISH -->
+    <action name="userFinish" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/userFinish.jsp</result>
+    </action>
+
+    <!-- USER ENABLE -->
+    <action name="userEnable" class="it.newmedia.gokick.site.web.actions.user.UserEnableAction">
+      <result>/jsp/registerEnable.jsp</result>
+    </action>
+
+    <!-- USER DELETE (non utilizzata?)-->
+    <action name="userDelete" class="it.newmedia.gokick.site.web.actions.user.UserDeleteAction">
+      <result>/jsp/userDelete.jsp</result>
+    </action>
+    <!-- USER DELETE (non utilizzata??)-->
+    <action name="userCancel" class="it.newmedia.gokick.site.web.actions.user.UserDeleteAction">
+      <result>/jsp/userDelete.jsp</result>
+    </action>
+
+    <!-- USER ACCOUNT CANCEL -->
+    <action name="userCancelAccount!*" class="it.newmedia.gokick.site.web.actions.user.UserCancelAction" method="{1}" >
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/userCancelAccount.jsp</result>
+      <result name="success" type="redirectAction">home</result>
+    </action>
+    
+    <action  name="user!*" class="it.newmedia.gokick.site.web.actions.UserAction" method="{1}" >
+      <result name="input">/jsp/register.jsp</result>
+      <result   name="gotoInput" type="redirectAction" >
+        <param  name="actionName">user!input</param>
+      </result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${invitationErrorCode}</param>
+      </result>
+      <result type="redirectAction">userUploadPictureCard!input</result>
+    </action>
+
+    <!-- USER ACCOUNT -->
+    <action name="userAccount!*" class="it.newmedia.gokick.site.web.actions.UserAction" method="{1}">
+      <result name="input">/jsp/account.jsp</result>
+      <result type="redirectAction">home</result>
+      <result   name="accountUpdated" type="redirectAction" >
+        <param  name="actionName">userAccount!input</param>
+      </result>
+      <result   name="gotoInput" type="redirectAction" >
+        <param  name="actionName">userAccount!input</param>
+      </result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${invitationErrorCode}</param>
+      </result>
+    </action>
+
+    <action name="userUploadPictureCard!*" class="it.newmedia.gokick.site.web.actions.UserUploadPictureCardAction" method="{1}">
+      <result name="accessDenied" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">accessDenied</param>
+      </result>
+      <result name="input">/jsp/registerPictureCard.jsp</result>
+      <result>/jsp/pictureCard.jsp</result>
+    </action>
+
+    <action name="userViewUploadedImage" class="it.newmedia.gokick.site.web.actions.UserViewUploadedImageAction">
+      <result type="stream">
+        <param name="contentType">image/jpeg</param>
+      </result>
+    </action>
+
+    <action name="userSavePictureCard" class="it.newmedia.gokick.site.web.actions.UserSavePictureCardAction">
+      <result name="accessDenied" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">accessDenied</param>
+      </result>
+      <result type="redirectAction">userFinish</result>
+    </action>
+
+    <!--    USER CHANGE PASSWORD    -->
+    <action name="changePasswordRequest!*" class="it.newmedia.gokick.site.web.actions.UserChangePasswordRequestAction" method="{1}">
+      <result name="input">/jsp/changePasswordRequest.jsp</result>
+      <result type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">changePasswordRequest</param>
+      </result>
+    </action>
+
+    <action name="changePasswordCheck" class="it.newmedia.gokick.site.web.actions.UserChangePasswordAction" method="check">
+      <result>/jsp/changePassword.jsp</result>
+    </action>
+
+    <action name="changePasswordSave" class="it.newmedia.gokick.site.web.actions.UserChangePasswordAction" method="save">
+      <result name="input">/jsp/changePassword.jsp</result>
+      <result >/jsp/changePassword.jsp</result>
+      <result type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">changePassword</param>
+      </result>
+    </action>
+
+    <!-- USER ALL/SEARCH -->
+    <action name="userAll!*" class="it.newmedia.gokick.site.web.actions.UserAllAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="success">/jsp/userAll.jsp</result>
+    </action>
+
+    <action name="searchUser" class="it.newmedia.gokick.site.web.actions.UserAllAction" method="searchUser">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/userAll.jsp</result>
+      <result name="success">/jsp/userAll.jsp</result>
+    </action>
+ 
+    <!-- SPORTCENTER ALL/SEARCH-->
+    <action name="sportCenter!*" class="it.newmedia.gokick.site.web.actions.SportCenterAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/sportCenter_insert.jsp</result>
+      <result name="success">/jsp/sportCenter_{1}.jsp</result>
+    </action>
+
+    <action name="sportCenterAll!*" class="it.newmedia.gokick.site.web.actions.SportCenterAllAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/sportCenterAll.jsp</result>
+      <result name="success">/jsp/sportCenterAll.jsp</result>
+    </action>
+
+    <!--    USER DETAILS    -->
+    <action name="userDetails" class="it.newmedia.gokick.site.web.actions.UserDetailsAction">
+      <param name="authenticationRequired">True</param>
+      <result name="error">/jsp/errorPopup.jsp</result>
+      <result>/jsp/userDetails.jsp</result>
+    </action>
+
+    <!-- ABUSE-->
+     <action name="sendAbuseNotify" class="it.newmedia.gokick.site.web.actions.UserDetailsAction" method="sendAbuseNotify">
+      <param name="authenticationRequired">True</param>
+      <result name="error">/jsp/errorPopup.jsp</result>
+      <result name="success" type="redirectAction">
+        <param name="actionName">userDetails</param>
+        <param name="idUser">${idUser}</param>
+        <param name="abuseMailSent">${abuseMailSent}</param>
+        <param name="tab">${tab}</param>
+      </result>
+    </action>
+
+    <!--    USER SETTINGS    -->
+    <action name="viewUserSettings" class="it.newmedia.gokick.site.web.actions.UserSettingsAction">
+      <param name="authenticationRequired">False</param>
+      <result>/jsp/userSettings.jsp</result>
+    </action>
+    
+    <action name="saveUserSettings" class="it.newmedia.gokick.site.web.actions.UserSettingsAction" method="save">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction">viewUserSettings</result>
+      <result name="input">/jsp/userSettings.jsp</result>
+    </action>
+
+    <!-- SQUADS -->
+    <action name="squadPreferences!*" class="it.newmedia.gokick.site.web.actions.SquadPreferencesAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/squadPreferences.jsp</result>
+      <result name="success" type="redirectAction">squad</result>
+    </action>
+    
+    <action name="squad" class="it.newmedia.gokick.site.web.actions.SquadAction">
+      <param name="authenticationRequired">True</param>
+      <result name="success">/jsp/squad.jsp</result>
+    </action>
+
+    <action name="inviteUser" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="inviteUser">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction">
+        <param name="actionName">userDetails</param>
+        <param name="idUser">${idUser}</param>
+        <param name="tab">scheda</param>
+      </result>
+    </action>
+
+    <action name="inviteUserBox" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="inviteUserBox">
+      <param name="authenticationRequired">True</param>
+      <result name="success">/jsp/userDetailsFriendship.jsp</result>
+    </action>
+    
+    <action name="acceptUserInvite" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="acceptInvite">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction" >
+        <param name="actionName">squad</param>
+        <param name="boxFriendRequestsVisible">${boxFriendRequestsVisible}</param>
+      </result>
+    </action>
+
+    <action name="notAcceptUserInvite" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="notAcceptInvite">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction" >
+        <param name="actionName">squad</param>
+        <param name="boxFriendRequestsVisible">${boxFriendRequestsVisible}</param>
+      </result>
+    </action>
+
+    <action name="removeUserInvite" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="removeInvite">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction" >
+        <param name="actionName">squad</param>
+        <param name="boxFriendRequestsVisible">${boxFriendRequestsVisible}</param>
+      </result>
+    </action>
+    
+    <action name="squadRemoveUser" class="it.newmedia.gokick.site.web.actions.SquadManageAction" method="removeUser">
+      <param name="authenticationRequired">True</param>
+      <result name="success" type="redirectAction">squad</result>
+    </action>
+
+    <action name="organizeMatchWelcome" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="welcome">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeWelcome.jsp</result>
+      <result name="success">/jsp/organizeMatch/organizeWelcome.jsp</result>
+    </action>
+
+    <action name="organizerPresentation" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="sendPresentation">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeWelcome.jsp</result>
+      <result name="success" type="redirectAction">
+        <param name="actionName">organizeMatchCreate!input</param>
+      </result>
+    </action>
+
+    <action name="organizeMatchTutorial" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="organizeMatchTutorial">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeMatchTutorial.jsp</result>
+      <result name="success">/jsp/organizeMatch/organizeMatchTutorial.jsp</result>
+    </action>
+
+
+
+    <action name="organizeMatchCreate!*" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeMatch.jsp</result>
+      <result name="success" type="redirectAction">calendar</result>
+      <result name="matchInserted" type="redirectAction">
+        <param name="actionName">viewMatch</param>
+        <param name="idMatch">${idMatch}</param>
+      </result>
+    </action>
+
+    <action name="organizeMatchReview!*" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeMatchReview.jsp</result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">matchError</param>
+      </result>
+      <result name="success" type="redirectAction">calendar</result>
+      <result name="matchUpdated" type="redirectAction">
+        <param name="actionName">viewMatch</param>
+        <param name="parse">true</param>
+        <param name="idMatch">${idMatch}</param>
+      </result>
+    </action>
+
+    <action name="organizeMatchCancel" class="it.newmedia.gokick.site.web.actions.OrganizeMatchAction" method="cancel">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/organizeMatch/organizeMatchReview.jsp</result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">matchError</param>
+      </result>
+      <result name="success" type="redirectAction">
+        <param name="actionName">calendar!viewCalendar</param>
+        <param name="defaultSearch">true</param>
+      </result>
+    </action>
+
+
+    
+    <!-- CALENDAR / SEARCH MATCH -->
+    <action name="calendar!*" class="it.newmedia.gokick.site.web.actions.CalendarAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/calendar.jsp</result>
+      <result name="success">/jsp/calendar.jsp</result>
+    </action>
+
+    <!-- RESULTS / SEARCH RESULTS -->
+    <action name="results!*" class="it.newmedia.gokick.site.web.actions.ResultsAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/results.jsp</result>
+      <result name="success">/jsp/results.jsp</result>
+    </action>
+
+    <!-- ARCHIVE -->
+
+    <action name="archiveMatch!*" class="it.newmedia.gokick.site.web.actions.ArchiveAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/archiveMatch.jsp</result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">archiveError</param>
+      </result>
+      <result name="saveDraft" type="redirectAction"   >
+        <param name="actionName">archiveMatch!input</param>
+        <param name="idMatch">${idMatch}</param>
+        <!--param name="teamOneGoals">${teamOneGoals}</param>
+        <param name="teamTwoGoals">${teamTwoGoals}</param-->
+      </result>
+      <result name="archive" type="redirectAction">
+        <param name="actionName">archiveMatch!report</param>
+        <param name="idMatch">${idMatch}</param>
+      </result>
+      <result name="report">/jsp/reportMatch.jsp</result>
+    </action>
+   
+    <!-- INFORMATION -->
+    <action name="information" class="it.newmedia.gokick.site.web.actions.InformationAction">
+      <result>/jsp/information.jsp</result>
+    </action>
+
+    <!-- cktest -->
+    <action name="ck" >
+      <result>/jsp/provaCk.jsp</result>
+    </action>
+
+    <!-- PICTURE CARD / AVATAR -->
+    <action name="viewPictureCard!*" class="it.newmedia.gokick.site.web.actions.ViewPictureCardAction" method="{1}">
+      <result type="stream">
+        <param name="contentType">image/jpeg</param>
+      </result>
+    </action>
+
+    <action name="pictureCard!*" class="it.newmedia.gokick.site.web.actions.PictureCardAction" method="{1}">
+      <result type="stream">
+        <param name="contentType">image/jpeg</param>
+      </result>
+      <result name="newImageSuccess">/jsp/uploadPictureCard.jsp</result>
+      <result name="chooseImageSuccess">/jsp/pictureCardHandler.jsp</result>
+      <result name="saveImageSuccess" type="redirectAction">
+        <param name="actionName">userPlayer</param>
+        <param name="method">input</param>
+      </result>
+      <result name="removeImageSuccess" type="redirectAction">
+        <param name="actionName">userPlayer</param>
+        <param name="method">input</param>
+      </result>
+    </action>
+
+    <action name="viewAvatar" class="it.newmedia.gokick.site.web.actions.ViewAvatarAction">
+      <result type="stream">
+        <param name="contentType">image/jpeg</param>
+      </result>
+      <result name="error" type="stream">
+        <param name="contentType">image/jpeg</param>
+      </result>
+    </action>
+
+    <!-- VIEW MATCH -->
+    <action name="viewMatch" class="it.newmedia.gokick.site.web.actions.MatchAction" >
+      <param name="authenticationRequired">True</param>
+      <!--
+      <result>/jsp/viewMatch.jsp</result>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${message}</param>
+      </result>
+      -->
+      <result type="redirectAction">
+        <param name="actionName">matchComments!viewAll</param>
+        <param name="idMatch">${idMatch}</param>
+      </result>
+    </action>
+
+    <action name="registerFriendToMatch!*" class="it.newmedia.gokick.site.web.actions.RegisterFriendToMatch" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${message}</param>
+      </result>
+      <result name="input">/jsp/registerFriendToMatch.jsp</result>
+      <result>/jsp/registerFriendToMatch.jsp</result>
+    </action>
+
+    <!-- CONVOCAZIONE GIOCATORI-->
+    <action name="callUpToMatch!*" class="it.newmedia.gokick.site.web.actions.CallUpPlayersToMatchAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${message}</param>
+      </result>
+      <result name="input">/jsp/callUpToMatch.jsp</result>
+      <result>/jsp/callUpToMatch.jsp</result>
+    </action>
+
+    <action name="searchToCallUp" class="it.newmedia.gokick.site.web.actions.CallUpPlayersToMatchAction" method="viewUsersToCall" >
+      <param name="authenticationRequired">False</param>
+      <result>/jsp/callUpToMatch.jsp</result>
+    </action>
+
+    <action name="contactPlayers!*" class="it.newmedia.gokick.site.web.actions.CallUpPlayersToMatchAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/contactPlayers.jsp</result>
+      <result>/jsp/contactPlayers.jsp</result>
+    </action>
+
+    <!-- ISCRIZIONE GIOCATORI-->
+    <action name="registerToMatch!*" class="it.newmedia.gokick.site.web.actions.MatchManageRegistrationsAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/registerToMatch.jsp</result>
+      <result>/jsp/registerToMatch.jsp</result>
+    </action>
+
+    <action name="registerToMatchReporting!*" class="it.newmedia.gokick.site.web.actions.MatchManageRegistrationsAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/registerToMatch.jsp</result>
+      <result>/jsp/registerToMatch.jsp</result>
+    </action>
+
+    <!-- INVITE TO SITE -->
+    <action name="inviteToSite!*" class="it.newmedia.gokick.site.web.actions.invitation.InviteToSiteAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="importSuccess">/jsp/invitation/inviteContatcsToSite.jsp</result>
+      <result name="*" >/jsp/invitation/inviteToSite.jsp</result>
+    </action>
+    
+    <action name="sendInviteToSite" class="it.newmedia.gokick.site.web.actions.invitation.InviteToSiteAction" method="sendInviteToContacts">
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/invitation/inviteContatcsToSite.jsp</result>
+      <result name="success" >/jsp/invitation/inviteToSite.jsp</result>
+    </action>
+    
+    <!-- INVITE TO MATCH -->
+    <action name="inviteToMatch!*" class="it.newmedia.gokick.site.web.actions.invitation.InviteToMatchAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="error">/jsp/invitation/inviteToMatch.jsp</result>
+      <result name="importSuccess">/jsp/invitation/inviteContatcsToMatch.jsp</result>
+      <result name="*" >/jsp/invitation/inviteToMatch.jsp</result>
+    </action>
+    
+    <action name="sendInviteToMatch" class="it.newmedia.gokick.site.web.actions.invitation.InviteToMatchAction" method="sendInviteToContacts">
+      <param name="authenticationRequired">True</param>
+      <result>/jsp/invitation/inviteContatcsToMatch.jsp</result>
+    </action>
+
+    <!-- FEEDBACK / MESSAGE-->
+    <action name="feedbackMessage!*" class="it.newmedia.gokick.site.web.actions.FeedbackMessageAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="inserted" type="redirectAction">
+        <param name="actionName">userDetails</param>
+        <param name="idUser">${idUser}</param>
+        <param name="tab">${tab}</param>
+      </result>
+    </action>
+
+    <!-- USER PLAYER (SCHEDA) -->
+    <action name="userPlayer!*" class="it.newmedia.gokick.site.web.actions.UserPlayerAction" method="{1}" >
+      <param name="authenticationRequired">True</param>
+      <result name="input">/jsp/userPlayer.jsp</result>
+      <result name="success" type="redirectAction">
+        <param name="actionName">userPlayer</param>
+        <param name="method">input</param>
+      </result>
+    </action>
+
+    <!-- MATCH COMMENTS -->
+    <action name="matchComments!*" class="it.newmedia.gokick.site.web.actions.MatchCommentsAction" method="{1}">
+      <param name="authenticationRequired">True</param>
+      <result name="info" type="redirectAction">
+        <param name="actionName">information</param>
+        <param name="info">${message}</param>
+      </result>
+      <result name="input">/jsp/matchComments.jsp</result>
+      <result name="matchCommentInserted" type="redirectAction">
+        <param name="actionName">matchComments!viewAll</param>
+        <param name="idMatch">${idMatch}</param>
+        <param name="idSavedMessage">${idSavedMessage}</param>
+        <param name="info">${message}</param>
+      </result>
+      <result name="matchCommentDeleted" type="redirectAction">
+        <param name="actionName">matchComments!viewAll</param>
+        <param name="idMatch">${idMatch}</param>
+        <param name="info">${message}</param>
+      </result>
+      <result name="matchCommentEdit">/jsp/matchComment_edit.jsp</result>
+      <result name="matchCommentPreview">/jsp/matchComment_preview.jsp</result>
+      <result>/jsp/matchComments.jsp</result>
+    </action>
+
+    <!-- TEST -->
+    <action name="test!*" class="it.newmedia.gokick.site.web.actions.TestAction" method="{1}">
+      <result>/service/test.jsp</result>
+    </action>
+
+    <!-- PICTURE COMMENT UPLOAD -->
+    <action  name="commentUpload" class="it.newmedia.gokick.site.web.actions.CommentUploadAction" >
+      <result>/jsp/uploadCommentImage.jsp</result>
+    </action>
+
+
+    <!--   CANCEL CACHE   -->
+    <action name="removeCache!*" class="it.newmedia.gokick.site.web.actions.cache.MenageChacheAction" method="{1}">
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+    <!--    SCHEDULER    -->
+    <action name="scheduler!*" class="it.newmedia.gokick.site.web.actions.SchedulerAction" method="{1}">
+      <result name="success">/jsp/schedulerPage.jsp</result>
+    </action>
+
+    <!-- START SYSTEM UTILITY-->
+
+    <!-- LOAD CACHE ALL INFOS -->
+    <action  name="loadAllInfos" class="it.newmedia.gokick.site.web.actions.LoadInfosAction" method="AllInfos" >
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+    <!-- LOAD CACHE INFOS SPECIFIED -->
+    <action  name="loadInfo!*" class="it.newmedia.gokick.site.web.actions.LoadInfosAction" method="{1}" >
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+    <!-- AGGIORNA CAMPO PLAYED_MATCH in tb USERS-->
+    <action  name="updatePlayedMatches" class="it.newmedia.gokick.site.web.actions.UpdateDataAction" method="updateUserPlayedMatches" >
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+    <!-- AGGIORNA LA TB STATISTICS-->
+    <action  name="reCalcStat" class="it.newmedia.gokick.site.web.actions.UpdateDataAction" method="reCalcStat" >
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+    <!-- AGGIORNA THIRD ORGANIZED MATCH -->
+    <action  name="reCalcThirdOrganizedDate" class="it.newmedia.gokick.site.web.actions.UpdateDataAction" method="reCalcThirdOrganizedDate" >
+      <result name="success">/service/batchResponse.jsp</result>
+    </action>
+
+
+    <!-- END SYSTEM UTILITY-->
+
+  </package>
+
+
+  <include file="strus-ajax.xml"/>
+
+  <include file="strus-display.xml"/>
+
+  <include file="strus-service.xml"/>
+
+</struts>

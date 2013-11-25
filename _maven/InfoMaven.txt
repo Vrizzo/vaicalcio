@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=FCKeditor-2.3.jar -DgroupId=net.fckeditor -DartifactId=fckeditor -Dversion=2.3 -Dpackaging=jar

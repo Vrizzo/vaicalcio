@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+       xmlns:wss="http://jax-ws.dev.java.net/spring/servlet" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://jax-ws.dev.java.net/spring/core
+        http://jax-ws.dev.java.net/spring/core.xsd
+        http://jax-ws.dev.java.net/spring/servlet
+        http://jax-ws.dev.java.net/spring/servlet.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+        >
+
+
+  <wss:binding url="/facebook">
+    <wss:service>
+      <ws:service bean="#facebookWs"/>
+    </wss:service>
+  </wss:binding>
+
+  <!-- Web service methods -->
+  <bean id="facebookWs" class="it.newmedia.social.ws.FacebookWS"/>
+
+  <bean id="securityProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="location" value="classpath:security-social.properties"/>
+  </bean>
+
+  <bean id="securityService" class="it.newmedia.social.service.SecurityService">
+    <property name="securityProperties" ref="securityProperties"/>
+  </bean>
+
+  <bean id="facebookService" class="it.newmedia.social.facebook.service.impl.FacebookServiceImpl">
+    <property name="urlOpenGraphPosts" value="${facebook.opengraphposts}"/>
+    <property name="urlOpenGraphFeed" value="${facebook.opengraphfeed}"/>
+    <property name="readDataTimeout" value="${facebook.readdatatimeout}"/>
+    <property name="securityService" ref="securityService"/>
+  </bean>
+
+  <!--Bean to load properties file -->
+  <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <!--reads facebook-social.properties file-->
+    <property name="locations">
+      <list>
+        <value>classpath:facebook-social.properties</value>
+      </list>
+    </property>
+  </bean>
+
+  <context:component-scan base-package="it.newmedia.social"/>
+
+</beans>

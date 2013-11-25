@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+  <package name="service" namespace="/service" extends="struts-default">
+
+    <default-interceptor-ref name="defaultStack"/>
+
+    <global-results >
+      <result name="error" >/jsp/error.jsp</result>
+      <result name="exception" >/jsp/exception.jsp</result>
+    </global-results>
+
+    <global-exception-mappings>
+      <exception-mapping exception="java.lang.Exception" result="exception"/>
+    </global-exception-mappings>
+
+    <action name="cache" >
+      <result>/service/cache.jsp</result>
+    </action>
+    <action name="monitor" >
+      <result>/service/monitor.jsp</result>
+    </action>
+    
+    <!-- dummy page for session refreshing -->
+    <action name="refresh" >
+      <result>/service/refresh.jsp</result>
+    </action>
+    
+    <!-- CUSTOM CONTENT TEST-->
+    <action name="custmContentTest" >
+      <result>/jsp/iFrametest.jsp</result>
+    </action>
+
+  </package>
+
+</struts>

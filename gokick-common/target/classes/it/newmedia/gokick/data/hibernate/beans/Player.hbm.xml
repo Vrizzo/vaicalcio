@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="true" table="PLAYERS" name="it.newmedia.gokick.data.hibernate.beans.Player">
+    <cache usage="read-write"/>
+    <id unsaved-value="null" name="id" column="ID_PLAYER">
+      <generator class="native"/>
+    </id>
+    <property name="playerStatus" column="PLAYER_STATUS"/>
+    <property name="requestDate" column="REQUEST_DATE"/>
+    <property name="cancellationDate" column="CANCELLATION_DATE"/>
+    <property name="reporterEnabled" column="REPORTER_ENABLED"/>
+    <property name="goals" column="GOALS"/>
+    <property name="ownGoals" column="OWN_GOALS"/>
+    <property name="playerType" column="PLAYER_TYPE"/>
+    <property name="position" column="POSITION"/>
+    <property name="outFirstName" column="OUT_FIRST_NAME"/>
+    <property name="outLastName" column="OUT_LAST_NAME"/>
+    <property name="outReference" column="OUT_REFERENCE"/>
+    <set inverse="true" cascade="none" fetch="join" lazy="true" table="PLAYERS_TO_MATCHES" name="matchList">
+      <key column="ID_PLAYER"/>
+      <many-to-many class="it.newmedia.gokick.data.hibernate.beans.Match" column="ID_MATCH" outer-join="true"/>
+    </set>
+    <many-to-one column="ID_PLAYER_ROLE" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.PlayerRole" lazy="proxy" not-null="false" name="playerRole"/>
+    <many-to-one column="ID_USER" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.User" lazy="proxy" not-null="false" name="user"/>
+    <property name="mobile" column="MOBILE"/>
+    <property name="review" column="REVIEW"/>
+    <property name="vote" column="VOTE"/>
+  </class>
+</hibernate-mapping>

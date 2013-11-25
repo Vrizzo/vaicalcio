@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="EMAIL_CONFIGURATIONS" name="it.newmedia.gokick.data.hibernate.beans.EmailConfiguration">
+    <id unsaved-value="null" name="id" column="ID_EMAIL_CONFIGURATION">
+      <generator class="native"/>
+    </id>
+    <property name="emailConfigurationType" column="EMAIL_CONFIGURATION_TYPE"/>
+    <property name="keyNameSubject" column="KEY_NAME_SUBJECT"/>
+    <property name="keyNameBody" column="KEY_NAME_BODY"/>
+    <property name="smptServer" column="SMTP_SERVER"/>
+    <property name="smtpAuthenticationEnabled" column="SMTP_AUTHENTICATION_ENABLED"/>
+    <property name="smtpUsername" column="SMTP_USER_NAME"/>
+    <property name="smtpPassword" column="SMTP_PASSWORD"/>
+    <property name="smtpPort" column="SMTP_PORT"/>
+    <property name="smtpSslEnabled" column="SMTP_SSL_ENABLED"/>
+    <property name="fromName" column="FROM_NAME"/>
+    <property name="fromEmail" column="FROM_EMAIL"/>
+    <property name="to" column="TO"/>
+    <property name="cc" column="CC"/>
+    <property name="bcc" column="BCC"/>
+    <property name="htmlFormatEnabled" column="HTML_FORMAT_ENABLED"/>
+    <property name="imagesFolderPath" column="IMAGES_FOLDER_PATH"/>
+    <property name="enabled" column="ENABLED"/>
+  </class>
+</hibernate-mapping>

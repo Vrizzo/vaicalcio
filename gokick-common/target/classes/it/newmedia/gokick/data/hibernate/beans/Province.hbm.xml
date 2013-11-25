@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="false" table="PROVINCES" name="it.newmedia.gokick.data.hibernate.beans.Province">
+    <cache usage="read-only"/>
+    <id unsaved-value="null" name="id" column="ID_PROVINCE">
+      <generator class="native"/>
+    </id>
+    <many-to-one column="ID_COUNTRY" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.Country" lazy="proxy" not-null="false" name="country"/>
+    <property name="name" column="NAME"/>
+    <property name="abbreviation" column="ABBREVIATION"/>
+    <property name="totUsers" column="TOT_USERS"/>
+    <set inverse="false" lazy="true" name="sportCenterList">
+      <key column="ID_PROVINCE"/>
+      <one-to-many class="it.newmedia.gokick.data.hibernate.beans.SportCenter"/>
+    </set>
+    <set inverse="false" lazy="true" name="userList">
+      <key column="ID_PROVINCE"/>
+      <one-to-many class="it.newmedia.gokick.data.hibernate.beans.User"/>
+    </set>
+  </class>
+</hibernate-mapping>

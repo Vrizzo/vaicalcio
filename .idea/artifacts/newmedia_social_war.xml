@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="newmedia-social:war">
+    <output-path>$PROJECT_DIR$/gokick-social/newmedia-social/target</output-path>
+    <root id="archive" name="newmedia-social.war">
+      <element id="artifact" artifact-name="newmedia-social:war exploded" />
+    </root>
+  </artifact>
+</component>

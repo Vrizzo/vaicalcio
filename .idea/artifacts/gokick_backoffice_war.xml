@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gokick-backoffice:war">
+    <output-path>$PROJECT_DIR$/gokick-backoffice/target</output-path>
+    <root id="archive" name="gokick-backoffice.war">
+      <element id="artifact" artifact-name="gokick-backoffice:war exploded" />
+    </root>
+  </artifact>
+</component>

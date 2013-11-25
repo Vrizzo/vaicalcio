@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>XML Data Over XHR With POST</title>
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/fonts/fonts-min.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/paginator/assets/skins/sam/paginator.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/datatable/assets/skins/sam/datatable.css" />
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/connection/connection-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/paginator/paginator-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/datasource/datasource-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/datatable/datatable-min.js"></script>
+
+<!--there is no custom header content for this example-->
+
+</head>
+
+<body class=" yui-skin-sam">
+
+
+<h1>XML Data Over XHR With POST</h1>
+
+<div class="exampleIntro">
+	<p>This examples makes a POST query to the Yahoo! Local webservice to populate
+a DataTable.</p>
+
+</div>
+
+<!--BEGIN SOURCE CODE FOR EXAMPLE =============================== -->
+
+<div id="xml"></div>
+
+<script type="text/javascript">
+YAHOO.util.Event.addListener(window, "load", function() {
+    YAHOO.example.XHR_XML = function() {
+        var myColumnDefs = [
+          {key:"Name", label:"Name", sortable:true},
+          {key:"CityName", label:"CityName", sortable:true},
+          {key:"Address"},
+          {key:"Telephone"}
+        ];
+
+        var myDataSource = new YAHOO.util.DataSource("../ajax/sportCenterDataTable.action?dataTableKey=temptemptemp");
+        myDataSource.connMethodPost = true;
+        myDataSource.responseType = YAHOO.util.DataSource.TYPE_XML;
+        myDataSource.responseSchema = {
+                            resultNode: "Result",
+                            fields: ["Name","CityName","Address","Telephone"],
+                            metaNode : "ResultSet", // Name of the node holding meta data
+                            metaFields : {
+                                totalResultsAvailable : "totalResultsAvailable"
+                            }
+        };
+
+        var myConfigs = {
+            dynamicData: true,
+            sortedBy : {
+              key: "Name",
+              dir: YAHOO.widget.DataTable.CLASS_ASC // Sets UI initial sort arrow
+            },
+            paginator: new YAHOO.widget.Paginator({ rowsPerPage: 3 })
+        };
+
+        var myDataTable = new YAHOO.widget.DataTable("xml", myColumnDefs,
+                myDataSource, myConfigs);
+
+        // Update totalRecords on the fly with value from server
+        myDataTable.handleDataReturnPayload = function(oRequest, oResponse, oPayload) {
+          oPayload.totalRecords = oResponse.meta.totalResultsAvailable;
+          return oPayload;
+          };
+
+        return {
+            oDS: myDataSource,
+            oDT: myDataTable
+        };
+    }();
+});
+</script>
+
+<!--END SOURCE CODE FOR EXAMPLE =============================== -->
+
+
+</body>
+</html>

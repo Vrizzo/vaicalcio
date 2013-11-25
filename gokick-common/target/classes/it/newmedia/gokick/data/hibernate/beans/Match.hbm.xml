@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="MATCHES" name="it.newmedia.gokick.data.hibernate.beans.Match">
+    <id unsaved-value="null" name="id" column="ID_MATCH">
+      <generator class="native"/>
+    </id>
+    <many-to-one column="ID_USER_OWNER" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.User" lazy="proxy" not-null="true" name="userOwner"/>
+    <property name="emailUserOwner" column="EMAIL_USER_OWNER"/>
+    <property name="mobileUserOwner" column="MOBILE_USER_OWNER"/>
+    <property name="matchStart" column="MATCH_START"/>
+    <property name="acceptTermination" column="ACCEPT_TERMINATION"/>
+    <property name="acceptTerminationLimit" column="ACCEPT_TERMINATION_LIMIT"/>
+    <property name="notes" column="NOTES"/>
+    <property name="directlyRegistration" column="DIRECTLY_REGISTRATION"/>
+    <property name="registrationStart" column="REGISTRATION_START"/>
+    <property name="squadOutEnabled" column="SQUAD_OUT_ENABLED"/>
+    <property name="registrationClosed" column="REGISTRATION_CLOSED"/>
+    <property name="maxPlayers" column="MAX_PLAYERS"/>
+    <property name="maxSquadOutPlayers" column="MAX_SQUAD_OUT_PLAYERS"/>
+    <property name="sportCenterName" column="SPORTS_CENTER_NAME"/>
+    <property name="sportCenterAddress" column="SPORTS_CENTER_ADDRESS"/>
+    <property name="sportCenterCity" column="SPORTS_CENTER_CITY"/>
+    <property name="teamNameOne" column="TEAM_NAME_ONE"/>
+    <property name="teamNameTwo" column="TEAM_NAME_TWO"/>
+    <property name="teamShirtOne" column="TEAM_SHIRT_ONE"/>
+    <property name="teamShirtTwo" column="TEAM_SHIRT_TWO"/>
+    <property name="teamGoalsOne" column="TEAM_GOALS_ONE"/>
+    <property name="teamGoalsTwo" column="TEAM_GOALS_TWO"/>
+    <property name="comment" column="COMMENT"/>
+    <property name="recorded" column="RECORDED"/>
+    <property name="recordedDate" column="RECORDED_DATE"/>
+    <property name="canceled" column="CANCELED"/>
+    <property name="notified" column="NOTIFIED"/>
+    <property name="lastComment" column="LAST_COMMENT"/>
+    <property name="created" column="CREATED"/>
+    <set inverse="false" cascade="all" outer-join="false" lazy="true" table="PLAYERS_TO_MATCHES" name="playerList">
+      <key column="ID_MATCH"/>
+      <many-to-many class="it.newmedia.gokick.data.hibernate.beans.Player" column="ID_PLAYER" outer-join="true"/>
+    </set>
+    <set inverse="true" lazy="true" name="commentList">
+      <key column="ID_MATCH"/>
+      <one-to-many class="it.newmedia.gokick.data.hibernate.beans.MatchComment"/>
+    </set>
+    <many-to-one column="ID_MATCH_TYPE" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.MatchType" lazy="proxy" not-null="true" name="matchType"/>
+    <many-to-one column="ID_SPORTS_CENTER" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.SportCenter" lazy="proxy" not-null="false" name="sportCenter"/>
+  </class>
+</hibernate-mapping>

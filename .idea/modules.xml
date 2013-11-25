@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" filepath="$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-common/gokick-common.iml" filepath="$PROJECT_DIR$/gokick-common/gokick-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-library/gokick-library.iml" filepath="$PROJECT_DIR$/gokick-library/gokick-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-project.iml" filepath="$PROJECT_DIR$/gokick-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-website/gokick-website.iml" filepath="$PROJECT_DIR$/gokick-website/gokick-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" filepath="$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" filepath="$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" />
+    </modules>
+  </component>
+</project>
+

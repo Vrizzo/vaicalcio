@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE urlrewrite >
+<!--
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+-->
+<urlrewrite>
+  <!-- /home -->
+    <rule>
+    <note>
+      Home page
+    </note>
+    <from>^/$</from>
+    <to type="redirect">calendar!viewCalendar.action</to>
+  </rule>
+  <!-- return dinamically array for messages as javascript file -->
+  <rule>
+    <from>/js/messagesjsfromjsp.js</from>
+    <to type="forward">/jsp/messagesjsfromjsp.jsp</to>
+  </rule>
+</urlrewrite>
+

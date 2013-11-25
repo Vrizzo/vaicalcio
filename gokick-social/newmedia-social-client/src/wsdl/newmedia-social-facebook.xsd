@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.3-b01-. --><xs:schema xmlns:tns="http://ws.social.newmedia.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.social.newmedia.it/">
+
+<xs:element name="readLastPosts" type="tns:readLastPosts"></xs:element>
+
+<xs:element name="readLastPostsResponse" type="tns:readLastPostsResponse"></xs:element>
+
+<xs:element name="writePosts" type="tns:writePosts"></xs:element>
+
+<xs:element name="writePostsResponse" type="tns:writePostsResponse"></xs:element>
+
+<xs:complexType name="writePosts">
+<xs:sequence>
+<xs:element name="request" type="tns:WritePostRequest" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="WritePostRequest">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="login" type="tns:Login" minOccurs="0"></xs:element>
+<xs:element name="posts" type="tns:WritePostRequestData" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="ABaseDto" abstract="true">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="WritePostRequestData">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="idUser" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="accessToken" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="link" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="caption" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="picture" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="writePostsResponse">
+<xs:sequence>
+<xs:element name="response" type="tns:WritePostResponse" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="WritePostResponse">
+<xs:complexContent>
+<xs:extension base="tns:AResponse">
+<xs:sequence>
+<xs:element name="posts" type="tns:WritePostResponseData" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="AResponse" abstract="true">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="errorMessage" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="success" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="WritePostResponseData">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="success" type="xs:boolean"></xs:element>
+<xs:element name="errorMessage" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="idUser" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="idPost" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="readLastPosts">
+<xs:sequence>
+<xs:element name="request" type="tns:ReadPostRequest" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReadPostRequest">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="login" type="tns:Login" minOccurs="0"></xs:element>
+<xs:element name="idUser" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="accessToken" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="readLastPostsResponse">
+<xs:sequence>
+<xs:element name="response" type="tns:ReadPostResponse" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ReadPostResponse">
+<xs:complexContent>
+<xs:extension base="tns:AResponse">
+<xs:sequence>
+<xs:element name="posts" type="tns:ReadPostResponseData" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="ReadPostResponseData">
+<xs:complexContent>
+<xs:extension base="tns:ABaseDto">
+<xs:sequence>
+<xs:element name="caption" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="idPost" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="link" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="message" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="picture" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+</xs:schema>

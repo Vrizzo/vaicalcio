@@ -1,0 +1,65 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+  <package name="display" namespace="/" extends="struts-default">
+
+    <interceptors>
+      <interceptor name="hibernateSessionInterceptor" class="it.newmedia.gokick.site.web.interceptors.HibernateSessionInterceptor"/>
+      <interceptor name="cobrandInterceptor" class="it.newmedia.gokick.site.web.interceptors.CobrandInterceptor"/>
+      <interceptor-stack name="appDefaultStack">
+        <interceptor-ref name="hibernateSessionInterceptor"/>
+        <interceptor-ref name="cobrandInterceptor"/>
+        <interceptor-ref name="defaultStack"/>
+      </interceptor-stack>
+    </interceptors>
+
+    <default-interceptor-ref name="appDefaultStack"/>
+
+    <global-results >
+      <result name="error" >/jsp/error.jsp</result>
+      <result name="errorPopup" >/jsp/errorPopup.jsp</result>
+    </global-results>
+
+    <action name="termsAndConditions" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/popupTermsAndConditions.jsp</result>
+    </action>
+    
+    <action name="accettazionePrivacy" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/popupPrivacy.jsp</result>
+    </action>
+    
+    <action name="newsletter" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/popupNewsletter.jsp</result>
+    </action>
+
+    <action name="tour1" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/tour1.jsp</result>
+    </action>
+
+    <action name="tour2" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/tour2.jsp</result>
+    </action>
+
+    <action name="tour3" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/tour3.jsp</result>
+    </action>
+
+    <action name="tour4" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/tour4.jsp</result>
+    </action>
+
+    <action name="tour5" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/tour5.jsp</result>
+    </action>
+
+    <action name="*Info" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/staticTemplate.jsp?content={1}</result>
+    </action>
+
+    <action name="*InfoPopup*" class="it.newmedia.gokick.site.web.actions.ABaseActionSupport">
+      <result>/jsp/staticTemplatePopup.jsp?content={1}&amp;lang={2}</result>
+    </action>
+
+  </package>
+
+</struts>

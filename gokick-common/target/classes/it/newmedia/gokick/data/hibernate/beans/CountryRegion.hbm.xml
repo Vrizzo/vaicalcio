@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="COUNTRY_REGIONS" name="it.newmedia.gokick.data.hibernate.beans.CountryRegion">
+    <id unsaved-value="null" name="id" column="ID_COUNTRY_REGION">
+      <generator class="native"/>
+    </id>
+    <many-to-one column="ID_COUNTRY" cascade="none" class="it.newmedia.gokick.data.hibernate.beans.Country" lazy="false" not-null="false" name="country"/>
+    <property name="name" column="NAME"/>
+  </class>
+</hibernate-mapping>

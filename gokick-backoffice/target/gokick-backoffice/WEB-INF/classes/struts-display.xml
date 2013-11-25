@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+  <package name="display" namespace="" extends="struts-default">
+
+    <interceptors>
+      <interceptor name="hibernateSessionInterceptor" class="it.newmedia.gokick.backOffice.web.interceptors.HibernateSessionInterceptor"/>
+      <interceptor-stack name="appDefaultStack">
+        <interceptor-ref name="hibernateSessionInterceptor"/>
+        <interceptor-ref name="defaultStack"/>
+      </interceptor-stack>
+    </interceptors>
+
+    <default-interceptor-ref name="appDefaultStack"/>
+    
+
+  </package>
+
+</struts>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class mutable="false" table="AUDITS" name="it.newmedia.gokick.data.hibernate.beans.Audit">
+    <cache usage="read-only"/>
+    <id unsaved-value="null" name="id" column="ID_AUDIT">
+      <generator class="native"/>
+    </id>
+    <property name="type" column="TYPE"/>
+    <property name="idUser" column="ID_USER"/>
+    <property name="cobrandCode" column="COBRAND_CODE"/>
+    <property name="ipAddress" column="IP_ADDRESS"/>
+    <property name="infos" column="INFOS"/>
+    <property name="refDateTime" column="REF_DATETIME"/>
+  </class>
+</hibernate-mapping>
