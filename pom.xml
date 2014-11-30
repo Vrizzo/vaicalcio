@@ -13,8 +13,8 @@
         <module>gokick-common</module>
         <module>gokick-website</module>
         <module>gokick-backoffice</module>
-        <module>gokick-social/newmedia-social</module>
-        <module>gokick-social/newmedia-social-client</module>
+        <!--<module>gokick-social/newmedia-social</module>-->
+        <!--<module>gokick-social/newmedia-social-client</module>-->
     </modules>
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
