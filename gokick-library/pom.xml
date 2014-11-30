@@ -7,12 +7,12 @@
   <groupId>it.newmedia.gokick</groupId>
   <version>1.2.4</version>
   <name>gokick-library</name>
-    <parent>
-        <groupId>it.newmedia.gokick</groupId>
-        <artifactId>gokick-project</artifactId>
-        <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+  <parent>
+    <groupId>it.newmedia.gokick</groupId>
+    <artifactId>gokick-project</artifactId>
+    <version>1.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -72,46 +72,6 @@
       <artifactId>xercesImpl</artifactId>
       <version>2.9.1</version>
       <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>ojb</groupId>
-      <artifactId>db-ojb</artifactId>
-      <version>1.0.4</version>
-      <type>jar</type>
-      <exclusions>
-        <exclusion>
-          <artifactId>hsqldb</artifactId>
-          <groupId>hsqldb</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jdori</artifactId>
-          <groupId>jdo</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xalan</artifactId>
-          <groupId>xalan</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jdo</artifactId>
-          <groupId>jdo</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>asm</artifactId>
-          <groupId>asm</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>asm-util</artifactId>
-          <groupId>asm</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>aspectwerkz-core</artifactId>
-          <groupId>aspectwerkz</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>cglib</artifactId>
-          <groupId>cglib</groupId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>commons-collections</groupId>

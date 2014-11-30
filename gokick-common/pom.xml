@@ -8,20 +8,25 @@
   <packaging>jar</packaging>
 
   <name>gokick-common</name>
-    <parent>
-        <groupId>it.newmedia.gokick</groupId>
-        <artifactId>gokick-project</artifactId>
-        <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+  <parent>
+    <groupId>it.newmedia.gokick</groupId>
+    <artifactId>gokick-project</artifactId>
+    <version>1.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <hibernate.version>3.3.1.ga</hibernate.version>
+    <hibernate.version>3.5.4-Final</hibernate.version>
   </properties>
 
   <repositories>
+    <repository>
+      <id>mvnrepository.com</id>
+      <name>Repository hosting the jee6 artifacts</name>
+      <url>http://central.maven.org/maven2/</url>
+    </repository>
     <repository>
       <id>repo2.maven.org</id>
       <name>Repository hosting the jee6 artifacts</name>

@@ -17,10 +17,15 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hibernate.version>3.3.1.ga</hibernate.version>
+        <hibernate.version>3.5.4-Final</hibernate.version>
     </properties>
 
     <repositories>
+        <repository>
+            <id>mvnrepository.com</id>
+            <name>Repository hosting the jee6 artifacts</name>
+            <url>http://central.maven.org/maven2/</url>
+        </repository>
         <repository>
             <id>repo2.maven.org</id>
             <name>Repository hosting the jee6 artifacts</name>
@@ -76,6 +81,21 @@
                 <exclusion>
                     <artifactId>spring-test</artifactId>
                     <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>displaytag</groupId>
+            <artifactId>displaytag</artifactId>
+            <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>poi</artifactId>
+                    <groupId>org.apache.poi</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>itext</artifactId>
+                    <groupId>com.lowagie</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -150,7 +170,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.4</version>
+            <version>1.5.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.struts</groupId>
@@ -230,20 +250,12 @@
             <version>${hibernate.version}</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>cglib</artifactId>
-                    <groupId>cglib</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>asm</artifactId>
-                    <groupId>asm</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>asm-attrs</artifactId>
-                    <groupId>asm</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>persistence-api</artifactId>
                     <groupId>javax.persistence</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
                 </exclusion>
             </exclusions>
         </dependency>

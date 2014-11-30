@@ -41,8 +41,9 @@
     <orderEntry type="library" name="Maven: asm:asm-tree:3.3" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
     <orderEntry type="library" name="Maven: ognl:ognl:3.0.6" level="project" />
-    <orderEntry type="library" name="Maven: javassist:javassist:3.11.0.GA" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3" level="project" />
+    <orderEntry type="library" name="Maven: displaytag:displaytag:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl104-over-slf4j:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: commons-jxpath:commons-jxpath:1.3" level="project" />
     <orderEntry type="library" name="Maven: taglibs:standard:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.1.2" level="project" />
@@ -58,8 +59,8 @@
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.7" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: net.sf.jsr107cache:jsr107cache:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.struts:struts2-json-plugin:2.3.15.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.tuckey:urlrewrite:2.5.2" level="project" />
@@ -69,14 +70,16 @@
     <orderEntry type="library" name="Maven: jboss:javassist:3.4.ga" level="project" />
     <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:3.3.1.ga" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate:3.2.4.ga" level="project" />
-    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:3.5.4-Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:3.5.4-Final" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-annotations:3.3.0.ga" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.0.0.ga" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-validator:3.0.0.ga" level="project" />
-    <orderEntry type="library" name="Maven: jboss:jboss-common-core:2.0.4.GA" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-annotations:3.5.4-Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.2" level="project" />
+    <orderEntry type="library" name="Maven: javassist:javassist:3.9.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.4.6" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.5" level="project" />

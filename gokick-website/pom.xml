@@ -9,24 +9,29 @@
   <packaging>war</packaging>
 
   <name>gokick-website</name>
-    <parent>
-        <groupId>it.newmedia.gokick</groupId>
-        <artifactId>gokick-project</artifactId>
-        <version>1.0</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+  <parent>
+    <groupId>it.newmedia.gokick</groupId>
+    <artifactId>gokick-project</artifactId>
+    <version>1.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
   <properties>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <hibernate.version>3.2.7.ga</hibernate.version>
+    <hibernate.version>3.5.4-Final</hibernate.version>
     <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
   </properties>
 
   <repositories>
     <repository>
+      <id>mvnrepository.com</id>
+      <name>Repository hosting the jee6 artifacts</name>
+      <url>http://central.maven.org/maven2</url>
+    </repository>
+    <repository>
       <id>repo2.maven.org</id>
       <name>Repository hosting the jee6 artifacts</name>
-      <url>http://repo2.maven.org/maven2/</url>
+      <url>http://repo2.maven.org/maven2</url>
     </repository>
     <repository>
       <id>java.net2</id>
@@ -35,7 +40,7 @@
     </repository>
     <repository>
       <id>maven.jahia.org</id>
-      <url>http://maven.jahia.org/maven2/</url>
+      <url>http://maven.jahia.org/maven2</url>
     </repository>
     <repository>
       <id>repository.jboss.org</id>
@@ -105,7 +110,7 @@
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.1.2</version>
-    </dependency>    
+    </dependency>
     <dependency>
       <groupId>net.sf.json-lib</groupId>
       <artifactId>json-lib</artifactId>
@@ -213,7 +218,7 @@
     </dependency>
     <dependency>
       <groupId>displaytag</groupId>
-      <artifactId>displaytag-export-poi</artifactId>
+      <artifactId>displaytag</artifactId>
       <version>1.2</version>
       <exclusions>
         <exclusion>
@@ -225,7 +230,7 @@
           <groupId>com.lowagie</groupId>
         </exclusion>
       </exclusions>
-    </dependency>    
+    </dependency>
     <dependency>
       <artifactId>commons-io</artifactId>
       <groupId>commons-io</groupId>
@@ -259,9 +264,9 @@
 
     <dependency>
       <groupId>org.hibernate</groupId>
-      <artifactId>hibernate</artifactId>
+      <artifactId>hibernate-entitymanager</artifactId>
       <version>${hibernate.version}</version>
-    </dependency>       
+    </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
@@ -283,7 +288,7 @@
       <artifactId>commons-collections</artifactId>
       <version>3.2.1</version>
       <type>jar</type>
-    </dependency>    
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -403,14 +408,14 @@
       <id>devel</id>
       <properties>
         <profile-name>devel</profile-name>
-        <jndi-datasource-name>gokick</jndi-datasource-name>
+        <jndi-datasource-name>jdbc/gokick</jndi-datasource-name>
       </properties>
     </profile>
     <profile>
       <id>preview</id>
       <properties>
         <profile-name>preview</profile-name>
-        <jndi-datasource-name>gokick</jndi-datasource-name>
+        <jndi-datasource-name>jdbc/gokick</jndi-datasource-name>
       </properties>
       <build>
         <plugins>
@@ -424,13 +429,13 @@
             </configuration>
           </plugin>
         </plugins>
-      </build>      
+      </build>
     </profile>
     <profile>
       <id>prod</id>
       <properties>
         <profile-name>prod</profile-name>
-        <jndi-datasource-name>gokick</jndi-datasource-name>
+        <jndi-datasource-name>jdbc/gokick</jndi-datasource-name>
       </properties>
       <build>
         <plugins>
@@ -444,7 +449,7 @@
             </configuration>
           </plugin>
         </plugins>
-      </build>      
+      </build>
     </profile>
   </profiles>
 </project>
