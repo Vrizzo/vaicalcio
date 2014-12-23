@@ -1,7 +1,12 @@
 package it.newmedia.gokick.site.managers;
 
 import it.newmedia.gokick.data.enums.EnumEmailConfigurationType;
-import it.newmedia.gokick.data.hibernate.beans.*;
+import it.newmedia.gokick.data.hibernate.beans.Cobrand;
+import it.newmedia.gokick.data.hibernate.beans.Language;
+import it.newmedia.gokick.data.hibernate.beans.Match;
+import it.newmedia.gokick.data.hibernate.beans.SportCenter;
+import it.newmedia.gokick.data.hibernate.beans.User;
+import it.newmedia.gokick.data.hibernate.beans.UserInvitation;
 import it.newmedia.gokick.site.AppContext;
 import it.newmedia.gokick.site.Constants;
 import it.newmedia.gokick.site.hibernate.DAOFactory;
@@ -25,6 +30,7 @@ import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Classe manager che gestisce ad alto livello l'invio delle email.
@@ -61,7 +67,7 @@ public class EmailManager
   private static final String REPLACE_BECOME_ORGANIZER_DATE = "###BECOME_ORGANIZER_DATE###";
   private static final String REPLACE_SPORTCENTER_ID = "###SPORTCENTER_ID###";
   private static final String REPLACE_SPORTCENTER_NAME = "###SPORTCENTER_NAME###";
-  //  private static final String REPLACE_SPORTCENTER_NAME_PITCH = "###SPORTCENTER_NAME_PITCH###";
+  private static final String REPLACE_MATCH_TO_PLAY = "###MATCH_TO_PLAY###";
   private static final String REPLACE_SPORTCENTER_COUNTRY = "###SPORTCENTER_COUNTRY###";
   private static final String REPLACE_SPORTCENTER_PROVINCE = "###SPORTCENTER_PROVINCE###";
   private static final String REPLACE_SPORTCENTER_CITY = "###SPORTCENTER_CITY###";
@@ -101,6 +107,14 @@ public class EmailManager
   private static final String PERU = "Peru";
   private static final String COLOMBIA = "Colombia";
   private static final String MEXICO = "Mexico";
+//  Calcio a 5
+//  Mercoledì 17 Gennaio ore 14:00 vedi >>
+//  Milanese Corvetto
+
+  public static final String MATCH_TO_PLAY_TEMPLATE = " " +
+    "###MATCH_TYPE_NAME###" +
+    "<strong>###MATCH_START_DAY###</strong><a href=\"http://www.gokick.org/matchComments!viewAll.action?idMatch=8259\"> vedi >></a><br/>" +
+    "###SPORTCENTER_NAME###<br/><br/>";
   // </editor-fold>
   // <editor-fold defaultstate="collapsed" desc="-- Members --">
   private static Logger logger = Logger.getLogger(EmailManager.class);
@@ -128,9 +142,11 @@ public class EmailManager
 
     try
     {
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserRegistration, locale, currentCobrand);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserRegistration,
+        locale, currentCobrand);
       // To
-      htmlEmailHelper.addTo(userToregister.getEmail(), userToregister.getFirstName() + " " + userToregister.getLastName());
+      htmlEmailHelper.addTo(userToregister.getEmail(),
+        userToregister.getFirstName() + " " + userToregister.getLastName());
 
       // <editor-fold defaultstate="collapsed" desc="-- Replace --"  >
       String tmpMsg = htmlEmailHelper.getMsg();
@@ -163,7 +179,7 @@ public class EmailManager
     logSendError(rSend, null);
   }
 
-  private static void logSendError(Result<String> rSend, String  uid)
+  private static void logSendError(Result<String> rSend, String uid)
   {
     if (rSend.isSuccessNotNull())
     {
@@ -171,7 +187,7 @@ public class EmailManager
       return;
     }
     StringBuilder sb = new StringBuilder();
-    if( StringUtils.isNotBlank(uid))
+    if (StringUtils.isNotBlank(uid))
     {
       sb.append("Uid:").append(uid).append("; ");
     }
@@ -196,7 +212,8 @@ public class EmailManager
    * @param language  lingua
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> inviteFriendsToSite(UserInfo userInfo, String fromEmail, String mailTo, String freeText, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> inviteFriendsToSite(UserInfo userInfo, String fromEmail, String mailTo, String freeText,
+                                                    Language language, Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -210,7 +227,8 @@ public class EmailManager
       invitation.setCode(UtilManager.getRandomCode());
       DAOFactory.getInstance().getUserInvitationDAO().makePersistent(invitation);
 
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteFriendsToSite, language, currentCobrand, userInfo.getId());
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteFriendsToSite, language,
+        currentCobrand, userInfo.getId());
       //from
       emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -260,7 +278,8 @@ public class EmailManager
    * @param language  lingua
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> inviteFriendsToMatch(UserInfo userInfo, MatchInfo matchInfo, String mailTo, String freeText, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> inviteFriendsToMatch(UserInfo userInfo, MatchInfo matchInfo, String mailTo,
+                                                     String freeText, Language language, Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -277,14 +296,15 @@ public class EmailManager
 
       if (userTo != null)
       {
-        language = chooseUserLanguage(userTo);
+        language = LanguageManager.chooseUserLanguage(userTo);
       }
       else
       {
         language = LanguageManager.getByLanguage(DEFAULT_LANGUAGE);
       }
 
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteFriendsToMatch, language, currentCobrand, userInfo.getId());
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteFriendsToMatch, language,
+        currentCobrand, userInfo.getId());
       //from
       emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -301,7 +321,8 @@ public class EmailManager
       }
 
       String subject = emailHelper.getSubject();
-      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
       emailHelper.setSubject(subject);
 
       String message = emailHelper.getMsg();
@@ -320,8 +341,10 @@ public class EmailManager
 
       message = message.replace(Constants.REPLACEMENT__MATCH_ID_MATCH, Integer.toString(matchInfo.getId()));
       message = message.replace(Constants.REPLACEMENT__MATCH_TYPE_NAME, matchInfo.getMatchTypeName());
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_NAME, matchInfo.getSportCenterName());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_CITY, matchInfo.getSportCenterCity());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_ADDRESS, matchInfo.getSportCenterAddress());
@@ -358,7 +381,8 @@ public class EmailManager
    * @param language  lingua
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> inviteOutersToMatch(UserInfo userInfo, MatchInfo matchInfo, String mailTo, String freeText, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> inviteOutersToMatch(UserInfo userInfo, MatchInfo matchInfo, String mailTo,
+                                                    String freeText, Language language, Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -372,7 +396,7 @@ public class EmailManager
 
       if (userTo != null)
       {
-        language = chooseUserLanguage(userTo);
+        language = LanguageManager.chooseUserLanguage(userTo);
         return inviteGokickersToMatch(userInfo, userTo, matchInfo, freeText, language, currentCobrand);
       }
       UserInvitation invitation = new UserInvitation();
@@ -383,14 +407,15 @@ public class EmailManager
 
       if (userTo != null)
       {
-        language = chooseUserLanguage(userTo);
+        language = LanguageManager.chooseUserLanguage(userTo);
       }
       else
       {
         language = LanguageManager.getByLanguage(DEFAULT_LANGUAGE);
       }
 
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteOutersToMatch, language, currentCobrand, userInfo.getId());
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteOutersToMatch, language,
+        currentCobrand, userInfo.getId());
       //from
       emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -407,7 +432,8 @@ public class EmailManager
       }
 
       String subject = emailHelper.getSubject();
-      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
       emailHelper.setSubject(subject);
 
       String message = emailHelper.getMsg();
@@ -426,8 +452,10 @@ public class EmailManager
 
       message = message.replace(Constants.REPLACEMENT__MATCH_ID_MATCH, Integer.toString(matchInfo.getId()));
       message = message.replace(Constants.REPLACEMENT__MATCH_TYPE_NAME, matchInfo.getMatchTypeName());
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_NAME, matchInfo.getSportCenterName());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_CITY, matchInfo.getSportCenterCity());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_ADDRESS, matchInfo.getSportCenterAddress());
@@ -465,7 +493,8 @@ public class EmailManager
    * @param currentCobrand cobrand del sito su cui si sta navigando
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> inviteGokickersToMatch(UserInfo userInfo, User userTo, MatchInfo matchInfo, String freeText, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> inviteGokickersToMatch(UserInfo userInfo, User userTo, MatchInfo matchInfo,
+                                                       String freeText, Language language, Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -473,9 +502,10 @@ public class EmailManager
     try
     {
 
-      language = chooseUserLanguage(userTo);
+      language = LanguageManager.chooseUserLanguage(userTo);
 
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteGokickersToMatch, language, currentCobrand, userInfo.getId());
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.InviteGokickersToMatch, language,
+        currentCobrand, userInfo.getId());
       //from
       emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -492,7 +522,8 @@ public class EmailManager
       }
 
       String subject = emailHelper.getSubject();
-      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
       emailHelper.setSubject(subject);
 
       String message = emailHelper.getMsg();
@@ -511,8 +542,10 @@ public class EmailManager
 
       message = message.replace(Constants.REPLACEMENT__MATCH_ID_MATCH, Integer.toString(matchInfo.getId()));
       message = message.replace(Constants.REPLACEMENT__MATCH_TYPE_NAME, matchInfo.getMatchTypeName());
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
-      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      message = message.replace(Constants.REPLACEMENT__MATCH_START_HOUR,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_5, language, currentCobrand));
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_NAME, matchInfo.getSportCenterName());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_CITY, matchInfo.getSportCenterCity());
       message = message.replace(Constants.REPLACEMENT__SPORT_CENTER_ADDRESS, matchInfo.getSportCenterAddress());
@@ -544,7 +577,8 @@ public class EmailManager
    * @param currentCobrand del sito che si sta navigando
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> contactMatchPlayers(int idUserOwner, MatchInfo matchInfo, String mailTo, String freeText, Cobrand currentCobrand)
+  public static Result<Boolean> contactMatchPlayers(int idUserOwner, MatchInfo matchInfo, String mailTo,
+                                                    String freeText, Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -552,8 +586,9 @@ public class EmailManager
     User userTo = UserManager.getByEmail(mailTo);
     try
     {
-      Language language = chooseUserLanguage(userTo);
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.ContactMatchPlayers, language, currentCobrand, userInfo.getId());
+      Language language = LanguageManager.chooseUserLanguage(userTo);
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.ContactMatchPlayers, language,
+        currentCobrand, userInfo.getId());
       //from
       emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -564,7 +599,8 @@ public class EmailManager
       // Faccio il replace delle informazioni aggiuntive
 
       String subject = emailHelper.getSubject();
-      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
+      subject = subject.replace(Constants.REPLACEMENT__MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_4, language, currentCobrand));
       emailHelper.setSubject(subject);
 
       String message = emailHelper.getMsg();
@@ -612,7 +648,8 @@ public class EmailManager
    * @param language
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> inviteRequest(String mailFrom, String freeText, String requestType, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> inviteRequest(String mailFrom, String freeText, String requestType, Language language,
+                                              Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -668,14 +705,17 @@ public class EmailManager
    * @param language
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendMatchModifiedNotifyEmail(User user, Date matchStartDate, String matchStartDateFormat, Language language, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchModifiedNotifyEmail(User user, Date matchStartDate,
+                                                             String matchStartDateFormat, Language language,
+                                                             Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
     try
     {
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchModified, language, currentCobrand);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchModified,
+        language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(user.getEmail(), user.getFirstName() + " " + user.getLastName());
@@ -683,7 +723,8 @@ public class EmailManager
       // Replace
       String tmpMsg = htmlEmailHelper.getMsg();
       tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, user.getFirstName());
-      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchStartDate, matchStartDateFormat, language, currentCobrand));
+      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchStartDate, matchStartDateFormat, language, currentCobrand));
       htmlEmailHelper.setMsg(tmpMsg);
 
       // Invio dell'email
@@ -711,7 +752,8 @@ public class EmailManager
    * @param currentCobrand    che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendMatchRegistrationOpenEmail(Match match, List<UserInfo> userInfoSquadList, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchRegistrationOpenEmail(Match match, List<UserInfo> userInfoSquadList,
+                                                               Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
@@ -724,8 +766,9 @@ public class EmailManager
           continue;
         }
         String password = UserManager.getById(userInfo.getId()).getPassword();
-        Language language = chooseUserLanguage(userInfo.getCountry());
-        htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchRegistrationOpenNotify, language, currentCobrand);
+        Language language = LanguageManager.chooseUserLanguage(userInfo.getCountry());
+        htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+          EnumEmailConfigurationType.MatchRegistrationOpenNotify, language, currentCobrand);
 
         // To
         htmlEmailHelper.addTo(userInfo.getEmail(), userInfo.getName() + " " + userInfo.getSurname());
@@ -734,8 +777,10 @@ public class EmailManager
         String tmpMsg = htmlEmailHelper.getMsg();
         tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, userInfo.getName());
         tmpMsg = replaceCredentialAutoLog(tmpMsg, userInfo.getId(), password);
-        tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME, match.getUserOwner().getFirstName() + " " + match.getUserOwner().getLastName());
-        tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(match.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
+        tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME,
+          match.getUserOwner().getFirstName() + " " + match.getUserOwner().getLastName());
+        tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+          DateManager.showDate(match.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
         tmpMsg = tmpMsg.replace(REPLACE_MATCH_ID, Integer.toString(match.getId()));
 
         htmlEmailHelper.setMsg(tmpMsg);
@@ -763,7 +808,8 @@ public class EmailManager
    * @param currentCobrand  che si riferisce al sito su cui sta navigando l'utente
    * @return sendMatchRegistrationOpenEmail (matchList,language)
    */
-  public static Result<Boolean> sendMatchRegistrationOpenEmail(Match match, Language currentLanguage, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchRegistrationOpenEmail(Match match, Language currentLanguage,
+                                                               Cobrand currentCobrand)
   {
     List<Match> matchList = new ArrayList<Match>();
     matchList.add(match);
@@ -778,7 +824,8 @@ public class EmailManager
    * @param currentCobrand  che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendMatchRegistrationOpenEmail(List<Match> matchList, Language currentLanguage, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchRegistrationOpenEmail(List<Match> matchList, Language currentLanguage,
+                                                               Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
@@ -814,8 +861,9 @@ public class EmailManager
 
           if (user.getAlertOnRegistrationStart())
           {
-            Language language = chooseUserLanguage(user);
-            htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchRegistrationOpenNotify, chooseUserLanguage(user), currentCobrand);
+            Language language = LanguageManager.chooseUserLanguage(user);
+            htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+              EnumEmailConfigurationType.MatchRegistrationOpenNotify, language, currentCobrand);
 
             // To
             htmlEmailHelper.addTo(user.getEmail(), user.getFirstName() + " " + user.getLastName());
@@ -824,8 +872,10 @@ public class EmailManager
             String tmpMsg = htmlEmailHelper.getMsg();
             tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, user.getFirstName());
             tmpMsg = replaceCredentialAutoLog(tmpMsg, user.getId(), user.getPassword());
-            tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME, match.getUserOwner().getFirstName() + " " + match.getUserOwner().getLastName());
-            tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(match.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
+            tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME,
+              match.getUserOwner().getFirstName() + " " + match.getUserOwner().getLastName());
+            tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+              DateManager.showDate(match.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
             tmpMsg = tmpMsg.replace(REPLACE_MATCH_ID, Integer.toString(match.getId()));
 
             htmlEmailHelper.setMsg(tmpMsg);
@@ -858,15 +908,18 @@ public class EmailManager
    * @param currentCobrand       che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendMatchCancelledNotifyEmail(User user, Date matchStartDate, String matchStartDateFormat, int idMatch, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchCancelledNotifyEmail(User user, Date matchStartDate,
+                                                              String matchStartDateFormat, int idMatch,
+                                                              Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
     try
     {
-      Language language = chooseUserLanguage(user);
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchCancelled, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(user);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchCancelled,
+        language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(user.getEmail(), user.getFirstName() + " " + user.getLastName());
@@ -875,7 +928,8 @@ public class EmailManager
       String tmpMsg = htmlEmailHelper.getMsg();
       tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, user.getFirstName());
       tmpMsg = replaceCredentialAutoLog(tmpMsg, user.getId(), user.getPassword());
-      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchStartDate, matchStartDateFormat, language, currentCobrand));
+      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchStartDate, matchStartDateFormat, language, currentCobrand));
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_ID, Integer.toString(idMatch));
 
       htmlEmailHelper.setMsg(tmpMsg);
@@ -903,15 +957,17 @@ public class EmailManager
    * @param currentCobrand che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendMatchArchivedNotifyEmail(User user, Date matchStartDate, Integer idMatch, Cobrand currentCobrand)
+  public static Result<Boolean> sendMatchArchivedNotifyEmail(User user, Date matchStartDate, Integer idMatch,
+                                                             Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
-    Language language = chooseUserLanguage(user);
+    Language language = LanguageManager.chooseUserLanguage(user);
     try
     {
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchArchived, language, currentCobrand);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.MatchArchived,
+        language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(user.getEmail(), user.getFirstName() + " " + user.getLastName());//user.getEmail()
@@ -920,13 +976,16 @@ public class EmailManager
       String tmpMsg = htmlEmailHelper.getMsg();
       tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, user.getFirstName());
       tmpMsg = replaceCredentialAutoLog(tmpMsg, user.getId(), user.getPassword());
-      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_13, language, currentCobrand));
+      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_13, language, currentCobrand));
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_ID, Integer.toString(idMatch));
       htmlEmailHelper.setMsg(tmpMsg);
 
       String tmpSubj = htmlEmailHelper.getSubject();
-      tmpSubj = tmpSubj.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_9, language, currentCobrand));
-      tmpSubj = tmpSubj.replace(REPLACE_MATCH_START_DAY, DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_19, language, currentCobrand));
+      tmpSubj = tmpSubj.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_9, language, currentCobrand));
+      tmpSubj = tmpSubj.replace(REPLACE_MATCH_START_DAY,
+        DateManager.showDate(matchStartDate, DateManager.FORMAT_DATE_19, language, currentCobrand));
       htmlEmailHelper.setSubject(tmpSubj);
       // Invio dell'email
       //Visto che ormai ci sono moltissimi email da inviare uso l'invio asincrono!
@@ -956,7 +1015,8 @@ public class EmailManager
 
     try
     {
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserChangePasswordRequest, language, currentCobrand);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+        EnumEmailConfigurationType.UserChangePasswordRequest, language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(user.getEmail(), user.getFirstName() + " " + user.getLastName());
@@ -1000,8 +1060,9 @@ public class EmailManager
 
     try
     {
-      Language language = chooseUserLanguage(userToInvite);
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserInviteNotify, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(userToInvite);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserInviteNotify,
+        language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(userToInvite.getEmail(), userToInvite.getFirstName() + " " + userToInvite.getLastName());
@@ -1010,7 +1071,8 @@ public class EmailManager
       String tmpMsg = htmlEmailHelper.getMsg();
       tmpMsg = replaceCredentialAutoLog(tmpMsg, userToInvite.getId(), userToInvite.getPassword());
       tmpMsg = tmpMsg.replace(REPLACE_USER_NAME, userToInvite.getFirstName());
-      tmpMsg = tmpMsg.replace(REPLACE_INVITING_USER_NAME, userInviting.getFirstName() + " " + userInviting.getLastName());
+      tmpMsg = tmpMsg.replace(REPLACE_INVITING_USER_NAME,
+        userInviting.getFirstName() + " " + userInviting.getLastName());
       htmlEmailHelper.setMsg(tmpMsg);
 
       // Invio dell'email
@@ -1035,18 +1097,21 @@ public class EmailManager
    * @param currentCobrand che si riferisce al sito su cui sta navigando l'utente
    * @return un oggetto Result "true" in caso di successo, altrimenti contenente la stringa d'errore
    */
-  public static Result<Boolean> sendAcceptUserInSquadNotifyEmail(User userRequesting, User ownerUser, Cobrand currentCobrand)
+  public static Result<Boolean> sendAcceptUserInSquadNotifyEmail(User userRequesting, User ownerUser,
+                                                                 Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
     try
     {
-      Language language = chooseUserLanguage(userRequesting);
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.AcceptUserInSquadNotify, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(userRequesting);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+        EnumEmailConfigurationType.AcceptUserInSquadNotify, language, currentCobrand);
 
       // To
-      htmlEmailHelper.addTo(userRequesting.getEmail(), userRequesting.getFirstName() + " " + userRequesting.getLastName());
+      htmlEmailHelper.addTo(userRequesting.getEmail(),
+        userRequesting.getFirstName() + " " + userRequesting.getLastName());
 
       // Replace
       String tmpMsg = htmlEmailHelper.getMsg();
@@ -1080,29 +1145,34 @@ public class EmailManager
    * @param currentCobrand che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendRequestRegisteredUserToMatchNotifyEmail(MatchInfo matchInfo, User user, Cobrand currentCobrand)
+  public static Result<Boolean> sendRequestRegisteredUserToMatchNotifyEmail(MatchInfo matchInfo, User user,
+                                                                            Cobrand currentCobrand)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
     try
     {
-      Language language = chooseUserLanguage(user);
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserRequestRegisteredToMatchNotify, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(user);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+        EnumEmailConfigurationType.UserRequestRegisteredToMatchNotify, language, currentCobrand);
 
       // To
       htmlEmailHelper.addTo(user.getEmail());
 
       // <editor-fold defaultstate="collapsed" desc="-- Replace --"  >
       String tmpSubject = htmlEmailHelper.getSubject();
-      tmpSubject = tmpSubject.replace(REPLACE_MATCH_START_DAY, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_15, language, currentCobrand));
+      tmpSubject = tmpSubject.replace(REPLACE_MATCH_START_DAY,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_15, language, currentCobrand));
       htmlEmailHelper.setSubject(tmpSubject);
 
       String tmpMsg = htmlEmailHelper.getMsg();
       tmpMsg = replaceCredentialAutoLog(tmpMsg, user.getId(), user.getPassword());
-      tmpMsg = tmpMsg.replace(REPLACE_CURRENTUSER_NAME, matchInfo.getNameUserOwner() + " " + matchInfo.getSurnameUserOwner());
+      tmpMsg = tmpMsg.replace(REPLACE_CURRENTUSER_NAME,
+        matchInfo.getNameUserOwner() + " " + matchInfo.getSurnameUserOwner());
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_TYPE_NAME, matchInfo.getMatchTypeName());
-      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DAY, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
+      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DAY,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_HOUR, matchInfo.getMatchStartHour());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_NAME, matchInfo.getSportCenterName());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_CITY, matchInfo.getSportCenterCity());
@@ -1137,7 +1207,8 @@ public class EmailManager
    * @param currentCobrand che si riferisce al sito su cui sta navigando l'utente
    * @return Un oggetto result con l'esito dell'operazione ed eventuali informazioni di errore in caso di fallimento
    */
-  public static Result<Boolean> sendRegisteredUserToMatchEmail(MatchInfo matchInfo, Integer idUser, String freeText, Cobrand currentCobrand)
+  public static Result<Boolean> sendRegisteredUserToMatchEmail(MatchInfo matchInfo, Integer idUser, String freeText,
+                                                               Cobrand currentCobrand)
   {
     AEmailHelper emailHelper;
     Result<String> rSend;
@@ -1145,8 +1216,9 @@ public class EmailManager
 
     try
     {
-      Language language = chooseUserLanguage(user.getCountry().getName());
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserRegisteredToMatchNotify, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(user.getCountry().getName());
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserRegisteredToMatchNotify, language,
+        currentCobrand);
 
       UserInfo userOwner = InfoProvider.getUserInfo(matchInfo.getIdUserOwner());
 
@@ -1167,16 +1239,19 @@ public class EmailManager
       }
 
       String tmpSubject = emailHelper.getSubject();
-      tmpSubject = tmpSubject.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
+      tmpSubject = tmpSubject.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
       emailHelper.setSubject(tmpSubject);
 
       String tmpMsg = emailHelper.getMsg();
       tmpMsg = replaceCredentialAutoLog(tmpMsg, user.getId(), user.getPassword());
 
       tmpMsg = tmpMsg.replace(REPLACE_FREE_TEXT, freeText);
-      tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME, matchInfo.getNameUserOwner() + " " + matchInfo.getSurnameUserOwner());
+      tmpMsg = tmpMsg.replace(REPLACE_USER_OWNER_NAME,
+        matchInfo.getNameUserOwner() + " " + matchInfo.getSurnameUserOwner());
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_TYPE_NAME, matchInfo.getMatchTypeName());
-      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE, DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
+      tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_DATE,
+        DateManager.showDate(matchInfo.getMatchStart(), DateManager.FORMAT_DATE_13, language, currentCobrand));
       tmpMsg = tmpMsg.replace(REPLACE_MATCH_START_HOUR, matchInfo.getMatchStartHour());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_NAME, matchInfo.getSportCenterName());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_CITY, matchInfo.getSportCenterCity());
@@ -1208,14 +1283,17 @@ public class EmailManager
    * @param idUserAuthor  id dell'autore dell'inserimento
    * @return Ritorna un oggetto Result con le informazioni in merito all'esito dell'operazione
    */
-  public static Result<Boolean> sendSportCenterInsertedEmail(SportCenter sportCenter, String nameTypePitch, Language language, Cobrand currentCobrand, int idUserAuthor)
+  public static Result<Boolean> sendSportCenterInsertedEmail(SportCenter sportCenter, String nameTypePitch,
+                                                             Language language, Cobrand currentCobrand,
+                                                             int idUserAuthor)
   {
     HtmlEmailHelper htmlEmailHelper;
     Result<String> rSend;
 
     try
     {
-      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.SportCenterInserted, language, currentCobrand);
+      htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(EnumEmailConfigurationType.SportCenterInserted,
+        language, currentCobrand);
       // To
       // definito nella configurazione di questa email
 
@@ -1226,7 +1304,8 @@ public class EmailManager
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_ID, sportCenter.getId().toString());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_NAME, sportCenter.getName());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_COUNTRY, sportCenter.getCountry().getName());
-      tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_PROVINCE, sportCenter.getProvince().getName() + " (" + sportCenter.getProvince().getAbbreviation() + ")");
+      tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_PROVINCE,
+        sportCenter.getProvince().getName() + " (" + sportCenter.getProvince().getAbbreviation() + ")");
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_CITY, sportCenter.getCity().getName());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_ADDRESS, sportCenter.getAddress());
       tmpMsg = tmpMsg.replace(REPLACE_SPORTCENTER_TYPE, nameTypePitch);
@@ -1256,11 +1335,13 @@ public class EmailManager
     return new Result<Boolean>(true, true);
   }
 
-  public static Result<Boolean> sendAbuseNotificatioEmail(int idUserAbusing, int idUserNotifing, int idReason, String freeText, Cobrand currentCobrand)
+  public static Result<Boolean> sendAbuseNotificatioEmail(int idUserAbusing, int idUserNotifing, int idReason,
+                                                          String freeText, Cobrand currentCobrand)
   {
     UserInfo userInfoAbusing = InfoProvider.getUserInfo(idUserAbusing);
     UserInfo userInfoNotifing = InfoProvider.getUserInfo(idUserNotifing);
-    List<AbuseReasonInfo> AbuseReasonInfoList = AppContext.getInstance().getAllAbuseReasons(LanguageManager.getByLanguage(DEFAULT_LANGUAGE), currentCobrand);
+    List<AbuseReasonInfo> AbuseReasonInfoList = AppContext.getInstance().getAllAbuseReasons(
+      LanguageManager.getByLanguage(DEFAULT_LANGUAGE), currentCobrand);
     AbuseReasonInfo reason = new AbuseReasonInfo();
     for (AbuseReasonInfo abuseReason : AbuseReasonInfoList)
     {
@@ -1275,7 +1356,8 @@ public class EmailManager
 
     try
     {
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.NotifyUserAbuse, LanguageManager.getByLanguage(DEFAULT_LANGUAGE), currentCobrand);
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.NotifyUserAbuse,
+        LanguageManager.getByLanguage(DEFAULT_LANGUAGE), currentCobrand);
       // To
       // definito nella configurazione di questa email
 
@@ -1289,12 +1371,14 @@ public class EmailManager
 
       String tmpSubject = emailHelper.getSubject();
       tmpSubject = tmpSubject.replace("###ID_USER_ABUSING###", Integer.toString(idUserAbusing));
-      tmpSubject = tmpSubject.replace("###COMPLETE_NAME_USER_ABUSING###", userInfoAbusing.getName() + " " + userInfoAbusing.getSurname());
+      tmpSubject = tmpSubject.replace("###COMPLETE_NAME_USER_ABUSING###",
+        userInfoAbusing.getName() + " " + userInfoAbusing.getSurname());
       emailHelper.setSubject(tmpSubject);
 
       String tmpMsg = emailHelper.getMsg();
       tmpMsg = tmpMsg.replace("###ID_USER_ABUSING###", Integer.toString(idUserAbusing));
-      tmpMsg = tmpMsg.replace("###COMPLETE_NAME_USER_ABUSING###", userInfoAbusing.getName() + " " + userInfoAbusing.getSurname());
+      tmpMsg = tmpMsg.replace("###COMPLETE_NAME_USER_ABUSING###",
+        userInfoAbusing.getName() + " " + userInfoAbusing.getSurname());
       tmpMsg = tmpMsg.replace("###CITY_USER_ABUSING###", userInfoAbusing.getCity());
       tmpMsg = tmpMsg.replace("###PROVINCE_USER_ABUSING###", userInfoAbusing.getProvince());
       tmpMsg = tmpMsg.replace("###COUNTRY_USER_ABUSING###", userInfoAbusing.getCountry());
@@ -1302,7 +1386,8 @@ public class EmailManager
       tmpMsg = tmpMsg.replace("###FREE_TEXT###", freeText);
       tmpMsg = tmpMsg.replace("###DATE###", new Date().toString());
       tmpMsg = tmpMsg.replace("###ID_USER_NOTIFIER###", Integer.toString(idUserNotifing));
-      tmpMsg = tmpMsg.replace("###COMPLETE_NAME_NOTIFIER###", userInfoNotifing.getName() + " " + userInfoNotifing.getSurname());
+      tmpMsg = tmpMsg.replace("###COMPLETE_NAME_NOTIFIER###",
+        userInfoNotifing.getName() + " " + userInfoNotifing.getSurname());
       tmpMsg = tmpMsg.replace("###CITY_USER_NOTIFIER###", userInfoNotifing.getCity());
       tmpMsg = tmpMsg.replace("###PROVINCE_USER_NOTIFIER###", userInfoNotifing.getProvince());
       tmpMsg = tmpMsg.replace("###COUNTRY_USER_NOTIFIER###", userInfoNotifing.getCountry());
@@ -1343,8 +1428,9 @@ public class EmailManager
 
     try
     {
-      Language language = chooseUserLanguage(user);
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserNewOrganizerConfirm, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(user);
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserNewOrganizerConfirm, language,
+        currentCobrand);
       //from
       //emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -1390,7 +1476,8 @@ public class EmailManager
     try
     {
       Language language = LanguageManager.getByLanguage(ITALIAN_LANGUAGE);
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.BackofficeNewOrganizer, language, currentCobrand);
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.BackofficeNewOrganizer, language,
+        currentCobrand);
       String userName = user.getFirstName() + " " + user.getLastName();
       //from
       emailHelper.setFrom(user.getEmail(), userName);
@@ -1409,9 +1496,11 @@ public class EmailManager
       String message = emailHelper.getMsg();
       message = StringUtils.replace(message, REPLACE_FREE_TEXT, freeText);
       message = StringUtils.replace(message, REPLACE_USER_ID, user.getId().toString());
-      message = StringUtils.replace(message, REPLACE_COMPLETE_USER_NAME, user.getFirstName() + " " + user.getLastName());
+      message = StringUtils.replace(message, REPLACE_COMPLETE_USER_NAME,
+        user.getFirstName() + " " + user.getLastName());
       message = StringUtils.replace(message, REPLACE_USER_EMAIL, user.getEmail());
-      message = StringUtils.replace(message, REPLACE_BECOME_ORGANIZER_DATE, DateManager.showDate(new Date(), DateManager.FORMAT_DATE_15, language, currentCobrand));
+      message = StringUtils.replace(message, REPLACE_BECOME_ORGANIZER_DATE,
+        DateManager.showDate(new Date(), DateManager.FORMAT_DATE_15, language, currentCobrand));
       message = StringUtils.replace(message, REPLACE_USER_CITY, user.getCity().getName());
       message = StringUtils.replace(message, REPLACE_USER_PROVINCE, user.getProvince().getName());
       message = StringUtils.replace(message, REPLACE_USER_NATION, user.getCountry().getName());
@@ -1446,8 +1535,9 @@ public class EmailManager
 
     try
     {
-      Language language = chooseUserLanguage(user);
-      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserThirdOrganizedMatch, language, currentCobrand);
+      Language language = LanguageManager.chooseUserLanguage(user);
+      emailHelper = EmailProvider.getEmailHelper(EnumEmailConfigurationType.UserThirdOrganizedMatch, language,
+        currentCobrand);
       //from
       //emailHelper.setFromName(userInfo.getFirstLastName());
       //reply to
@@ -1506,88 +1596,9 @@ public class EmailManager
   /**
    * restituisce la lingua basandosi sulla nazionalità dell'utente
    *
-   * @param user utente
-   * @return language
-   */
-  private static Language chooseUserLanguage(User user)
-  {
-    Language language;
-
-    String playingCountry = user.getCountry().getName();
-    if (playingCountry.equals(ITALY))
-    {
-      language = LanguageManager.getByLanguage(ITALIAN_LANGUAGE);
-    }
-    else if (playingCountry.equals(GERMANY) || playingCountry.equals(AUSTRIA))
-    {
-      language = LanguageManager.getByLanguage(GERMAN_LANGUAGE);
-    }
-    else if (playingCountry.equals(ENGLAND) || playingCountry.equals(USA))
-    {
-      language = LanguageManager.getByLanguage(ENGLISH_LANGUAGE);
-    }
-    else if (playingCountry.equals(FRANCE) || playingCountry.equals(SENEGAL) || playingCountry.equals(TUNISIA))
-    {
-      language = LanguageManager.getByLanguage(FRENCH_LANGUAGE);
-    }
-    else if (playingCountry.equals(SPAIN) || playingCountry.equals(CHILE) || playingCountry.equals(ARGENTINA) || playingCountry.equals(VENEZUELA) || playingCountry.equals(ECUADOR) || playingCountry.equals(BOLIVIA) || playingCountry.equals(
-            URUGUAY) || playingCountry.equals(PARAGUAY) || playingCountry.equals(PERU) || playingCountry.equals(COLOMBIA) || playingCountry.equals(MEXICO))
-    {
-      language = LanguageManager.getByLanguage(SPANISH_LANGUAGE);
-    }
-    else if (playingCountry.equals(PORTUGAL))
-    {
-      language = LanguageManager.getByLanguage(PORTUGUESE_LANGUAGE);
-    }
-    else
-    {
-      language = LanguageManager.getByLanguage(DEFAULT_LANGUAGE);
-    }
-    return language;
-  }
-
-  /**
-   * restituisce la lingua basandosi sulla nazionalità dell'utente
-   *
    * @param country stringa contente il nome della country
    * @return language
    */
-  private static Language chooseUserLanguage(String country)
-  {
-    Language language;
-
-    String playingCountry = country;
-    if (playingCountry.equals(ITALY))
-    {
-      language = LanguageManager.getByLanguage(ITALIAN_LANGUAGE);
-    }
-    else if (playingCountry.equals(GERMANY) || playingCountry.equals(AUSTRIA))
-    {
-      language = LanguageManager.getByLanguage(GERMAN_LANGUAGE);
-    }
-    else if (playingCountry.equals(ENGLAND) || playingCountry.equals(USA))
-    {
-      language = LanguageManager.getByLanguage(ENGLISH_LANGUAGE);
-    }
-    else if (playingCountry.equals(FRANCE) || playingCountry.equals(SENEGAL) || playingCountry.equals(TUNISIA))
-    {
-      language = LanguageManager.getByLanguage(FRENCH_LANGUAGE);
-    }
-    else if (playingCountry.equals(SPAIN) || playingCountry.equals(CHILE) || playingCountry.equals(ARGENTINA) || playingCountry.equals(VENEZUELA) || playingCountry.equals(ECUADOR) || playingCountry.equals(BOLIVIA) || playingCountry.equals(
-            URUGUAY) || playingCountry.equals(PARAGUAY) || playingCountry.equals(PERU) || playingCountry.equals(COLOMBIA) || playingCountry.equals(MEXICO))
-    {
-      language = LanguageManager.getByLanguage(SPANISH_LANGUAGE);
-    }
-    else if (playingCountry.equals(PORTUGAL))
-    {
-      language = LanguageManager.getByLanguage(PORTUGUESE_LANGUAGE);
-    }
-    else
-    {
-      language = LanguageManager.getByLanguage(DEFAULT_LANGUAGE);
-    }
-    return language;
-  }
 
   /**
    * restituisce il messaggio sostituendo alle stringhe apposite id e pwd utente (criptata con Md5)
@@ -1608,19 +1619,20 @@ public class EmailManager
   {
     try
     {
-      Language language = chooseUserLanguage(currentUser);
+      Language language = LanguageManager.chooseUserLanguage(currentUser);
 
       //Imposto il tipo di email da mandare
       EnumEmailConfigurationType emailType = EnumEmailConfigurationType.PlayMorePartnerNotifyGreaterThanZero;
-      if(distance == 0)
+      if (distance == 0)
       {
         emailType = EnumEmailConfigurationType.PlayMorePartnerNotifyEqualZero;
       }
-      else if( distance < 0)
+      else if (distance < 0)
       {
         emailType = EnumEmailConfigurationType.PlayMorePartnerNotifyLessThanZero;
       }
-      HtmlEmailHelper htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(emailType, language, currentCobrand, currentUser.getId());
+      HtmlEmailHelper htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(emailType, language,
+        currentCobrand, currentUser.getId());
 
       // To
       htmlEmailHelper.addTo(currentUser.getEmail(), currentUser.getFirstName() + " " + currentUser.getLastName());
@@ -1639,11 +1651,11 @@ public class EmailManager
       htmlEmailHelper.setMsg(tmpMsg);
 
       StringBuilder sbDebug = new StringBuilder();
-      sbDebug.append(SystemUtils.LINE_SEPARATOR).append("###")
-              .append("IdUser: ").append(currentUser.getId()).append(", ").append(currentUser.getFirstName()).append(" ").append(currentUser.getEmail())
-             .append(SystemUtils.LINE_SEPARATOR).append(htmlEmailHelper.getSubject())
-             .append(SystemUtils.LINE_SEPARATOR).append("###").append("###").append(htmlEmailHelper.getMsg()).append(SystemUtils.LINE_SEPARATOR)
-             .append(SystemUtils.LINE_SEPARATOR);
+      sbDebug.append(SystemUtils.LINE_SEPARATOR).append("###").append("IdUser: ").append(currentUser.getId()).append(
+        ", ").append(currentUser.getFirstName()).append(" ").append(currentUser.getEmail()).append(
+        SystemUtils.LINE_SEPARATOR).append(htmlEmailHelper.getSubject()).append(SystemUtils.LINE_SEPARATOR).append(
+        "###").append("###").append(htmlEmailHelper.getMsg()).append(SystemUtils.LINE_SEPARATOR).append(
+        SystemUtils.LINE_SEPARATOR);
       logger.debug(sbDebug);
       new EmailAsynch(htmlEmailHelper).send();
     }
@@ -1652,6 +1664,46 @@ public class EmailManager
       //HibernateSessionHolder.rollbackTransaction();
       logger.error("Invio email soci play more fallito", ex);
     }
+  }
+
+  public static void  sendWakeUpMail(User user, Cobrand currentCobrand, Set<Match> match) throws Exception
+  {
+
+    HtmlEmailHelper htmlEmailHelper = (HtmlEmailHelper) EmailProvider.getEmailHelper(
+      EnumEmailConfigurationType.MatchWakeUpUser, LanguageManager.chooseUserLanguage(user), currentCobrand);
+    String msg = htmlEmailHelper.getMsg();
+    msg = replaceCredentialAutoLog(msg, user.getId(), user.getPassword());
+    msg = msg.replace(REPLACE_CURRENTUSER_NAME,  user.getFirstName());
+    msg = msg.replace(REPLACE_MATCH_TO_PLAY, getMatchString(match, user, currentCobrand));
+
+    htmlEmailHelper.addTo(user.getEmail());
+    htmlEmailHelper.setMsg(msg);
+    htmlEmailHelper.send();
+  }
+
+  private static String getMatchString(Set<Match> matchList, User user, Cobrand currentCobrand)
+  {
+    StringBuilder matchListToPlay = new StringBuilder();
+    for (Match match : matchList)
+    {
+
+      String matchToPlay = MATCH_TO_PLAY_TEMPLATE;
+
+
+      matchToPlay = matchToPlay.replace(EmailManager.REPLACE_MATCH_TYPE_NAME, match.getMatchType().getLabel());
+
+      matchToPlay = matchToPlay.replace(REPLACE_MATCH_START_DAY,
+        DateManager.showDate(match.getMatchStart(), DateManager.FORMAT_DATE_3, LanguageManager.chooseUserLanguage(user),
+          currentCobrand));
+
+      matchToPlay = matchToPlay.replace(REPLACE_MATCH_ID, Integer.toString(match.getId()));
+      matchToPlay = matchToPlay.replace(REPLACE_SPORTCENTER_NAME, match.getSportCenterName());
+      matchToPlay = matchToPlay.replace(REPLACE_SPORTCENTER_ADDRESS, match.getSportCenterAddress());
+      matchToPlay = matchToPlay.replace(REPLACE_SPORTCENTER_CITY, match.getSportCenterCity());
+      matchListToPlay.append(matchToPlay);
+    }
+    return matchListToPlay.toString();
+
   }
   // </editor-fold>
 
@@ -1675,7 +1727,7 @@ public class EmailManager
         @Override
         public void run()
         {
-          int waitFor = RandomUtils.nextInt()%5000;
+          int waitFor = RandomUtils.nextInt() % 5000;
           logger.debug(uid + " " + "EmailAsynch run and wait for ms " + waitFor);
           try
           {
@@ -1688,7 +1740,7 @@ public class EmailManager
           Result<String> rSend = emailHelper.send();
           if (rSend.isSuccessNotNull())
           {
-            if( logger.isInfoEnabled())
+            if (logger.isInfoEnabled())
             {
               logger.info(uid + " " + DateUtil.printElapsedTime(start) + " OK: " + rSend.getValue());
             }

@@ -11,9 +11,8 @@ import org.apache.log4j.Logger;
  */
 public class MatchNotifyManager implements Runnable
 {
-  //<editor-fold defaultstate="collapsed" desc="-- Members --">
+
   private static final Logger logger = Logger.getLogger(MatchNotifyManager.class);
-  // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="-- Constructors --">
   /**
@@ -22,16 +21,13 @@ public class MatchNotifyManager implements Runnable
   public MatchNotifyManager()
   {
   }
-  // </editor-fold>
 
-  //<editor-fold defaultstate="collapsed" desc="-- Public Methods --">
   public void run()
   {
     HibernateSessionHolder.sessionPerRequestBegin();
     EmailManager.sendMatchRegistrationOpenEmail(MatchManager.getMatchToNotify(), null, null);
     HibernateSessionHolder.sessionPerRequestCommit();
   }
-  // </editor-fold>
 
 
 

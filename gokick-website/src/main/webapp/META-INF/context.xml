@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--localHost-->
-<Context path="" reloadable="true">
-  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" initialSize="5" maxActive="400" maxIdle="-1" maxWait="2000" minEvictableIdleTimeMillis="1000000" name="jdbc/gokick" password="y74bGkW" testOnBorrow="false" testWhileIdle="true" timeBetweenEvictionRunsMillis="-1" type="javax.sql.DataSource" url="jdbc:mysql://176.31.225.213:3306/Gokick_Preview?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull" username="root"  validationQuery="SELECT 1"/>
+<Context path="/" reloadable="true">
+    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" initialSize="5" maxActive="400" maxIdle="-1" maxWait="2000" minEvictableIdleTimeMillis="1000000" name="jdbc/gokick" password="" testOnBorrow="false" testWhileIdle="true" timeBetweenEvictionRunsMillis="-1" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/Gokick_Preview?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull" username="root"  validationQuery="SELECT 1"/>
 </Context>
-<!--
-    url="jdbc:mysql://localhost:3306/GoKick?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
-    username="root"
-    password=""
+  <!--
+      url="jdbc:mysql://localhost:3306/GoKick?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+      username="root"
+      password=""
 
-    url="jdbc:mysql://127.0.0.1:3306/GoKick?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
-    username="root"
-    password=""
+      url="jdbc:mysql://127.0.0.1:3306/GoKick?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+      username="root"
+      password=""
 
-    url="jdbc:mysql://127.0.0.1:3306/Gokick_Preview?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
-    username="root"
-    password=""
--->
+      url="jdbc:mysql://127.0.0.1:3306/Gokick_Preview?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+      username="root"
+      password=""
+  -->

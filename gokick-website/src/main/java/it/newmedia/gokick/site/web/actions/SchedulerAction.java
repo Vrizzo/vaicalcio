@@ -2,6 +2,7 @@ package it.newmedia.gokick.site.web.actions;
 
 import it.newmedia.gokick.site.managers.scheduler.MatchNotifyManager;
 import it.newmedia.gokick.site.managers.scheduler.PlayMorePartnerNotifyManager;
+import it.newmedia.gokick.site.managers.scheduler.WakeUpUserManager;
 import org.apache.log4j.Logger;
 
 /**
@@ -12,16 +13,8 @@ import org.apache.log4j.Logger;
  */
 public class SchedulerAction extends ABaseActionSupport
 {
-
-  // <editor-fold defaultstate="collapsed" desc="-- Constants --">
   private static Logger logger = Logger.getLogger(SchedulerAction.class);
-  // </editor-fold>
 
-  // <editor-fold defaultstate="collapsed" desc="-- Members --">
-  
-  // </editor-fold>
-
-  // <editor-fold defaultstate="collapsed" desc="-- Methods --"  >
   @Override
   public String execute()
   {
@@ -44,9 +37,13 @@ public class SchedulerAction extends ABaseActionSupport
     return SUCCESS;
   }
 
-  // </editor-fold>
+  public String wakeUpUserNotifyMail()
+  {
+    WakeUpUserManager wakeUpUserManager = new WakeUpUserManager();
+    wakeUpUserManager.run();
+//    Thread tm = new Thread(wakeUpUserManager);
+//    tm.start();
+    return SUCCESS;
+  }
 
-  // <editor-fold defaultstate="collapsed" desc="-- Getters / Setters --"  >
- 
-  // </editor-fold>
 }

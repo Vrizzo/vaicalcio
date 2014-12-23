@@ -15,7 +15,6 @@ import org.apache.log4j.Logger;
  */
 public class LanguageManager
 {
-  //<editor-fold defaultstate="collapsed" desc="CONSTANTS">
   private static final String DEFAULT_LANGUAGE = "en";
   private static final String GERMAN_LANGUAGE = "de";
   private static final String ITALIAN_LANGUAGE = "it";
@@ -43,47 +42,9 @@ public class LanguageManager
   private static final String PERU = "Peru";
   private static final String COLOMBIA = "Colombia";
   private static final String MEXICO = "Mexico";
-  //</editor-fold>
-  
-  //<editor-fold defaultstate="collapsed" desc="-- Members --">
+
 
   private static Logger logger = Logger.getLogger(LanguageManager.class);
-  // </editor-fold>
-
-  //<editor-fold defaultstate="collapsed" desc="-- Constructors --">
-  // </editor-fold>
-  
-  //<editor-fold defaultstate="collapsed" desc="-- Public Methods --">
-//  /**
-//   * Restituisce l'oggetto language in funzione della stringa passata.
-//   * Attenzione! Se non trova la lingua restituisce l'italiano come default che
-//   * DEVE sempre esistere!!
-//   * @param localeValue Stringa relativa al linguaggio "it", "en"....
-//   * @return L'oggetto richiesto
-//   */
-//  public static Language getByLocale(String localeValue)
-//  {
-//    try
-//    {
-//      Language language = DAOFactory.getInstance().getLanguageDAO().getByLanguage(localeValue);
-//      if (language == null || !language.isEnabled())
-//      {
-//        //recupero la lingua italiana come default
-//        language = DAOFactory.getInstance().getLanguageDAO().getByLanguage(Constants.LANGUAGE_IT);
-//      }
-//      if (language == null)
-//      {
-//        //Questa situazione è "impossibile". nel db deve esistere la lingua italiana
-//        logger.error("Db non contain [it] language!!. Add it to use site");
-//      }
-//      return language;
-//    }
-//    catch (Exception e)
-//    {
-//      logger.error("Error retrieving a valid language object for current session!!!");
-//    }
-//    return null;
-//  }
 
   /**
    * Restituisce l'oggetto language in funzione della stringa passata.
@@ -132,20 +93,20 @@ public class LanguageManager
       return new ArrayList<Language>();
     }
   }
-  
+
   /**
    * restituisce la lingua basandosi sul id country passato
-   * @param idCountry 
+   * @param idCountry
    * @return language
    */
   public  static Language chooseLanguage(int idCountry)
   {
-    
+
     Country country = CountryManager.getCountry(idCountry);
     String langCountry = country.getName();
     Language language;
 
-    
+
     if (langCountry.equals(ITALY))
     {
       language = LanguageManager.getByLanguage(ITALIAN_LANGUAGE);

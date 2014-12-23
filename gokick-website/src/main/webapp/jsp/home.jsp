@@ -95,6 +95,7 @@
     <div class="rightColHPnotLog">
       <u:translation key="label.homeNotLogExtRight"/>
     </div>
+    <iframe marginwidth="0" marginheight="0" frameborder="0" scrolling="no" allowtransparency="true" src="http://srv.juiceadv.com/banner_iframe.asp?user=2339&amp;tipo=6" width="160" height="600"></iframe>
   </u:showForCobrandTypes>
   <!--### end rightcolumn ###-->
 

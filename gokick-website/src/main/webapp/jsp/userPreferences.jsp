@@ -113,6 +113,15 @@
             <s:checkbox name="userToUpdate.alertOnReportCreated"/>
           </td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <u:translation key="label.alertOnWakeUp"/>
+          </td>
+          <td class="right" style="border-bottom:solid 1px #FFFFFF;">
+            <s:checkbox name="userToUpdate.alertOnWakeup"/>
+          </td>
+        </tr>
+
 
         <!-- Condivisione facebook -->
         <tr>

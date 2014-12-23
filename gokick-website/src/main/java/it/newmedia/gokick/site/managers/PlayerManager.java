@@ -2,6 +2,7 @@ package it.newmedia.gokick.site.managers;
 
 import it.newmedia.gokick.data.enums.EnumPlayerStatus;
 import it.newmedia.gokick.data.hibernate.beans.Player;
+import it.newmedia.gokick.data.hibernate.beans.User;
 import it.newmedia.gokick.data.hibernate.dao.PlayerDAO;
 import it.newmedia.gokick.data.hibernate.dao.PlayerRoleDAO;
 import it.newmedia.gokick.site.hibernate.DAOFactory;
@@ -201,6 +202,19 @@ public class PlayerManager {
     {
       String[] playerStatusesValues={EnumPlayerStatus.UserCalled.getValue()};
       return DAOFactory.getInstance().getPlayerDAO().getIdUserByPlayerStatus(idMatch, playerStatusesValues);
+    }
+    catch (Exception ex)
+    {
+      logger.error(ex, ex);
+      return new ArrayList();
+    }
+  }
+
+  public static List<Integer>  findLastUserIsPlayer(User user)
+  {
+    try
+    {
+      return DAOFactory.getInstance().getPlayerDAO().findLastUserIsPlayer(user.getId(), 10);
     }
     catch (Exception ex)
     {

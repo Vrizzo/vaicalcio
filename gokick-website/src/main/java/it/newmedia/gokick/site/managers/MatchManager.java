@@ -410,7 +410,7 @@ public class MatchManager
     int count = 0;
     Date txDurationTime = new Date();
     HibernateSessionHolder.beginTransaction();
-    Match match = new Match();
+    Match match ;
 
     //    StringBuilder sb = new StringBuilder();
     //    sb.append(System.getProperty("line.separator"));
@@ -1348,6 +1348,37 @@ public class MatchManager
       return new ArrayList<Integer>();
     }
 
+  }
+
+  public static List<Match> findMatchToPlayByCity(City city)
+  {
+    try
+    {
+      return DAOFactory.getInstance().getMatchDAO().findMatchToPlayByCity(city);
+    }
+    catch (Exception ex)
+    {
+      java.util.logging.Logger.getLogger(MatchManager.class.getName()).log(Level.SEVERE, null, ex);
+      return new ArrayList<Match>();
+    }
+  }
+
+  public static List< Match> findMatchToPlayByLatestSportCenterUsed(User user)
+  {
+
+    try
+    {
+      List<Integer> lastUserIsPlayer = PlayerManager.findLastUserIsPlayer(user);
+      System.out.println(lastUserIsPlayer);
+      List<Integer> lastSportCenterUsed = DAOFactory.getInstance().getMatchDAO().lastSportCenterUsed(lastUserIsPlayer);
+      System.out.println(lastSportCenterUsed);
+      return DAOFactory.getInstance().getMatchDAO().findMatchToPlayBySportCenter(lastSportCenterUsed);
+    }
+    catch (Exception ex)
+    {
+      java.util.logging.Logger.getLogger(MatchManager.class.getName()).log(Level.SEVERE, null, ex);
+      return new ArrayList<Match>();
+    }
   }
 
 

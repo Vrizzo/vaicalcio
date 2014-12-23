@@ -364,6 +364,7 @@ public class UserManager
       User userToUpdate = DAOFactory.getInstance().getUserDAO().get(UserContext.getInstance().getUser().getId());
 
       userToUpdate.setAlertOnMessages(userModified.getAlertOnMessages());
+      userToUpdate.setAlertOnWakeup(userModified.getAlertOnWakeup());
       userToUpdate.setAlertOnChange(userModified.getAlertOnChange());
       userToUpdate.setAlertOnSquadRequest(userModified.getAlertOnSquadRequest());
       userToUpdate.setAlertOnRegistrationStart(userModified.getAlertOnRegistrationStart());
@@ -966,6 +967,25 @@ public class UserManager
     try
     {
       friendsList = DAOFactory.getInstance().getUserDAO().getAllFriendsToNotifyMatchStart(idSquad);
+    }
+    catch (Exception ex)
+    {
+      logger.error(ex, ex);
+      return friendsList;
+    }
+    return friendsList;
+  }
+  /**
+   *
+   * @param limit numero di utenti da caricare
+   * @return lista di utenti da invaire la mail di wakeUp
+   */
+  public static List<User> findUserToWakeUp(int limit)
+  {
+    List<User> friendsList = new ArrayList();
+    try
+    {
+      friendsList = DAOFactory.getInstance().getUserDAO().findUserToWakeUp(limit);
     }
     catch (Exception ex)
     {

@@ -126,7 +126,7 @@ public class UserDetailsAction extends AuthenticationBaseAction
       }
         
 
-      if (this.idUser == UserContext.getInstance().getUser().getId())
+      if (UserContext.getInstance().isLoggedIn() && this.idUser == UserContext.getInstance().getUser().getId())
       {
         this.selfUser = true;
       }
@@ -134,39 +134,42 @@ public class UserDetailsAction extends AuthenticationBaseAction
       this.userSquadInfo = DAOFactory.getInstance().getSquadDAO().getFirstByIdUser(this.idUser);
 
       Squad SquadUserToRelate = SquadManager.getUserFirstSquad(this.userToShow.getId());
-      String userRelationship = SquadManager.getUserRelationship(UserContext.getInstance().getUser().getId(),
-              this.userToShow.getId(),
-              UserContext.getInstance().getFirstSquad().getId(),
-              SquadUserToRelate.getId());
-      if (this.userToShow.getId() == UserContext.getInstance().getUser().getId())
+      if(UserContext.getInstance().isLoggedIn() )
       {
-        this.relationshipStatusMessage = "";
-        this.invite = false;
-      }
-      else
-      {
-        if (userRelationship.equals(EnumUserSquadStatus.Confirmed.getValue()))
-        {
-          this.relationshipStatusMessage = getText("label.friendRelationship.confirm");
-          this.invite = false;
-        }
-        else if (userRelationship.equals(EnumUserSquadStatus.Invited.getValue()) || userRelationship.equals(EnumUserSquadStatus.Request.getValue()))
-        {
-          this.relationshipStatusMessage = getText("label.friendRelationship.pending");
-          this.invite = false;
-        }
-        else if (userRelationship.equals(""))
+        String userRelationship = SquadManager.getUserRelationship(UserContext.getInstance().getUser().getId(),
+          this.userToShow.getId(),
+          UserContext.getInstance().getFirstSquad().getId(),
+          SquadUserToRelate.getId());
+        if (this.userToShow.getId() == UserContext.getInstance().getUser().getId())
         {
           this.relationshipStatusMessage = "";
-          this.invite = true;
+          this.invite = false;
+        }
+        else
+        {
+          if (userRelationship.equals(EnumUserSquadStatus.Confirmed.getValue()))
+          {
+            this.relationshipStatusMessage = getText("label.friendRelationship.confirm");
+            this.invite = false;
+          }
+          else if (userRelationship.equals(EnumUserSquadStatus.Invited.getValue()) || userRelationship.equals(EnumUserSquadStatus.Request.getValue()))
+          {
+            this.relationshipStatusMessage = getText("label.friendRelationship.pending");
+            this.invite = false;
+          }
+          else if (userRelationship.equals(""))
+          {
+            this.relationshipStatusMessage = "";
+            this.invite = true;
+          }
+        }
+        this.squadVisible = true;
+        if (this.userSquadInfo.getHiddenEnabled() && !userRelationship.equals(EnumUserSquadStatus.Confirmed.getValue()))
+        {
+          this.squadVisible = false;
         }
       }
 
-      this.squadVisible = true;
-      if (this.userSquadInfo.getHiddenEnabled() && !userRelationship.equals(EnumUserSquadStatus.Confirmed.getValue()))
-      {
-        this.squadVisible = false;
-      }
 
 
       this.squadInfoToShow = SquadInfoManager.getGuiSquadInfo(userSquadInfo);
