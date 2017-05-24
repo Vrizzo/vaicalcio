@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-website/pom.xml" afterPath="$PROJECT_DIR$/gokick-website/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/gokick-backoffice/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -88,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="408" column="10" lean-forward="true" selection-start-line="408" selection-start-column="10" selection-end-line="408" selection-end-column="10" />
+            <state relative-caret-position="425">
+              <caret line="462" column="13" lean-forward="false" selection-start-line="462" selection-start-column="13" selection-end-line="462" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -162,8 +163,8 @@
         <option value="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
       </list>
     </option>
   </component>
@@ -941,12 +942,12 @@
       <workItem from="1495464220104" duration="3676000" />
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
-      <workItem from="1495655014410" duration="1825000" />
+      <workItem from="1495655014410" duration="1916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7771000" />
+    <option name="totallyTimeSpent" value="7862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
@@ -1370,14 +1371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="408" column="10" lean-forward="true" selection-start-line="408" selection-start-column="10" selection-end-line="408" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1398,6 +1391,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="462" column="13" lean-forward="false" selection-start-line="462" selection-start-column="13" selection-end-line="462" selection-end-column="13" />
           <folding />
         </state>
       </provider>
