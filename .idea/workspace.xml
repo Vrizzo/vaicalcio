@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/displaytag.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/hibernate.cfg.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/messages.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/strus-ajax.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/strus-display.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/strus-service.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/struts.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/struts.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/template/gokick/radiomapVert.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/template/gokick/test.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/template/gokick/theme.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/template/gokick/translation.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/template/gokick/translationArgs.ftl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/endorsed/javaee-endorsed-api-6.0.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
@@ -52,8 +66,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -73,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
-              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+              <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -98,8 +112,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6615">
-              <caret line="441" column="13" lean-forward="false" selection-start-line="441" selection-start-column="13" selection-end-line="441" selection-end-column="13" />
+            <state relative-caret-position="410">
+              <caret line="411" column="12" lean-forward="false" selection-start-line="411" selection-start-column="12" selection-end-line="411" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -126,6 +140,7 @@
       <find>fckeditor</find>
       <find>spring</find>
       <find>target</find>
+      <find>profile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +171,6 @@
         <option value="$PROJECT_DIR$/gokick-library/src/main/java/it/newmedia/database/ojb/BrokerConnectionManager.java" />
         <option value="$PROJECT_DIR$/gokick-library/src/main/java/it/newmedia/database/ojb/BrokerConnection.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/UserManager.java" />
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/AGenericDAO.java" />
@@ -168,6 +182,7 @@
         <option value="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
@@ -177,6 +192,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="devel" />
+      </list>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -188,6 +210,20 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="newmedia-social-client" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="newmedia-social-client" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -321,6 +357,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vaicalcio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gokick-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaicalcio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gokick-website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -912,12 +962,12 @@
       <workItem from="1495464220104" duration="3676000" />
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
-      <workItem from="1495655014410" duration="444000" />
+      <workItem from="1495655014410" duration="824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6390000" />
+    <option name="totallyTimeSpent" value="6770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
@@ -943,9 +993,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962587" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962587" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25146198" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1339,14 +1389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6615">
-          <caret line="441" column="13" lean-forward="false" selection-start-line="441" selection-start-column="13" selection-end-line="441" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1384,15 +1426,23 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="411" column="12" lean-forward="false" selection-start-line="411" selection-start-column="12" selection-end-line="411" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>
