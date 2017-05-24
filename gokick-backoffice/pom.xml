@@ -387,6 +387,9 @@
     <profiles>
         <profile>
             <id>devel</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <profile-name>devel</profile-name>
                 <jndi-datasource-name>devel</jndi-datasource-name>
