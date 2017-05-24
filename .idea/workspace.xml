@@ -2,393 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_commons_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_tree_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__backport_util_concurrent_backport_util_concurrent_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_org_apache_xml_internal_resolver_20050927.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_messaging_saaj_saaj_impl_1_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_stream_buffer_streambuffer_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_stream_sjsxp_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_txw2_txw2_20090102.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_ws_jaxws_rt_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_ws_policy_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_ws_webservices_rt_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_chain_commons_chain_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_discovery_commons_discovery_0_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_transaction_commons_transaction_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__displaytag_displaytag_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jws_jsr181_api_1_0_MR1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_soap_saaj_api_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_webservices_api_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_ws_jaxws_api_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jboss_javassist_3_4_ga.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bull_javamelody_javamelody_core_1_39_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_fckeditor_java_core_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_1_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_4_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jsr107cache_jsr107cache_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_email_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xbean_xbean_spring_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_wstx_asl_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_devlib_schmidt_imageinfo_1_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_external_management_api_3_0_0_b012.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_gmbal_gmbal_api_only_3_1_0_b001.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_ha_ha_api_3_1_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_annotation_3_1_b35.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jrobin_jrobin_1_5_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_jax_ws_commons_spring_jaxws_spring_1_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_mimepull_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl104_over_slf4j_1_4_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_5_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_5_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_2_5_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_tuckey_urlrewrite_2_5_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_9_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/FeedbackCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/InfoCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/MatchCommentCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/PlayMorePartnerCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/SiteConfigurationCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/StatisticCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/cache/TranslationCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumAuditType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumCobrandType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumEmailConfigurationType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumPermissions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumPictureCardStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumPlayerStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumPlayerType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumSex.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumUserSquadStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/enums/EnumUserStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/AGenericDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/AHibernateDAOFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/IGenericDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/ABean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/ACreatedBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/AExtendedCreatedBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/ALabelKeyBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/AbuseReason.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Audit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/City$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/City.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Cobrand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Country$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Country.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/CountryRegion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/FootballTeam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Language.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Match.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/MatchComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/MatchType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Message.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PhysicalCondition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PictureCard$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PictureCard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Pitch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PitchCover.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PitchGround.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PitchType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Player$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Player$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Player$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PlayerFoot.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/PlayerRole.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Province$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Province.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/SiteConfiguration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/SpecialInvitation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Sport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/SportCenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Squad.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Statistic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Translation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UserComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UserInvitation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UserLastViewComment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UserSquad.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UsersMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/UsersPermission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/VPlayMorePartner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/VPlayerMatchChallangeArchived.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/AbuseReasonDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/AuditDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/CityDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/CobrandDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/CountryDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/EmailConfigurationDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/FootballTeamDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/LanguageDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/MatchCommentDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/MatchDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/MatchTypeDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/MessageDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PictureCardDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PitchCoverDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PitchTypeDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PlayerDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PlayerFootDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/PlayerRoleDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/ProvinceDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/SiteConfigurationDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/SpecialInvitationDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/SportCenterDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/SquadDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/StatisticDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/TranslationDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UserCommentDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UserDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UserInvitationDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UserLastViewCommentDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UserSquadDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UsersMessageDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/UsersPermissionDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/VPlayMorePartnerDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/dao/VPlayerMatchChallangeArchivedDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/test-classes/it/newmedia/gokick/AppTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/AppContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/UserContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/AGuiBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/FriendEmail.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiCalendarDayInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiCalendarInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiContact$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiContact$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiContact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiMatchInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiPlayerInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiPlayerVote.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiSquadInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/guibean/GuiStatisticPeriod.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/hibernate/DAOFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/hibernate/HibernateSessionHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/AInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/AbuseReasonInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/FeedbackInfo$FeedbackRowInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/FeedbackInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/MatchCommentInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/MatchInfo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/MatchInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/MatchTypeInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/PitchCoverInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/PitchTypeInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/PlayerRoleInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SportCenterInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/SquadInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$14.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$15.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$16.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/StatisticInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/infos/UserInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/CityManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/CountryManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/DateManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/EmailManager$EmailAsynch$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/EmailManager$EmailAsynch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/EmailManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/FacebookManager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/FacebookManager$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/FacebookManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/GuiManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/ImportContactManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/LanguageManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/MatchCommentManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/MatchInfoManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/MatchManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/MessageManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/PlayerManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/ProvinceManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/SecurityManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/SportCenterManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/SquadInfoManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/SquadManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/StatisticInfoManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/StatisticManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/UserCommentManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/UserInfoManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/UserManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/UtilManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/scheduler/MatchNotifyManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/managers/scheduler/PlayMorePartnerNotifyManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/providers/EmailProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/providers/InfoProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/providers/PlayMorePartnerProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/providers/SiteConfigurationProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/providers/TranslationProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ABaseActionSupport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ArchiveAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/AuthenticationBaseAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/CalendarAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/CallUpPlayersToMatchAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/CommentUploadAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/FeedbackMessageAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/HomeAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/InformationAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/LoadInfosAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/MatchAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/MatchCommentsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/MatchManageRegistrationsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/MatchPlayerStatusAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/OrganizeAction_.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/OrganizeMatchAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/PictureCardAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/RegisterFriendToMatch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ResultsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SchedulerAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SportCenterAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SportCenterAllAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SquadAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SquadManageAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/SquadPreferencesAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/TestAction$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/TestAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UpdateDataAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserAllAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserChangePasswordAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserChangePasswordRequestAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserDetailsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserPlayerAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserSavePictureCardAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserSettingsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserUploadPictureCardAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/UserViewUploadedImageAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ViewAvatarAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ViewPictureCardAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ADataTableAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ChangeCaptchaQuestionAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/CheckUniqueEmailAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/CheckUniqueForumNicknameAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/CitiesByProvinceAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/InviteUsersAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ProvincesByCountryAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowAcceptTerminationLimitAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowConditionAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowDateAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowPrivacyAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowRegistrationOpenDaysAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/ShowTermsAndConditionsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/SportCenterDataTableAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/SportCentersByCityAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/SportCentersByProvinceAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/StatisticInfoDataTableAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/ajax/UsersAutocomAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/cache/MenageChacheAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/invitation/AInviteAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/invitation/InviteRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/invitation/InviteToMatchAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/invitation/InviteToSiteAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/matchRegisteredPlayersAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/matchRequestPlayersAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/social/FacebookAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/BackOfficeLoginAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserCancelAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserDeleteAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserEnableAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserIntroAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserLoginAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserLogoutAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/actions/user/UserPreferencesAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/datatable/ADataTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/datatable/DataTableFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/datatable/SportCenterInfoDataTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/datatable/StatisticInfoDataTable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/filters/DisableJSID$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/filters/DisableJSID.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/filters/UTF8Filter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/interceptors/AuthenticationInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/interceptors/CobrandInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/interceptors/HibernateSessionInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/interceptors/RememberMeInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/listeners/SessionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/site/web/taghandlers/DateFormatTagHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/ImageProc$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/ImageProc$HorizontalAlign.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/ImageProc$VerticalAlign.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/ImageProc.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/ImageProcMain.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-website/target/classes/it/newmedia/gokick/util/Utils.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/gokick-common-1.0.jar" afterPath="$PROJECT_DIR$/gokick-common/target/gokick-common-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/FacebookWSService.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/FacebookWSService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" afterPath="$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/gokick-common.iml" afterPath="$PROJECT_DIR$/gokick-common/gokick-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/gokick-common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/surefire-reports/TEST-it.newmedia.gokick.AppTest.xml" afterPath="$PROJECT_DIR$/gokick-common/target/surefire-reports/TEST-it.newmedia.gokick.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/surefire-reports/it.newmedia.gokick.AppTest.txt" afterPath="$PROJECT_DIR$/gokick-common/target/surefire-reports/it.newmedia.gokick.AppTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-library/gokick-library.iml" afterPath="$PROJECT_DIR$/gokick-library/gokick-library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/FacebookWSService.java" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/FacebookWSService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-website/gokick-website.iml" afterPath="$PROJECT_DIR$/gokick-website/gokick-website.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" afterPath="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/gokick-backoffice/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -434,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -454,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+            <state relative-caret-position="331">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -510,6 +125,7 @@
       <find>net.fckeditor</find>
       <find>fckeditor</find>
       <find>spring</find>
+      <find>target</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -552,6 +168,7 @@
         <option value="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -1295,12 +912,12 @@
       <workItem from="1495464220104" duration="3676000" />
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
-      <workItem from="1495655014410" duration="226000" />
+      <workItem from="1495655014410" duration="444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6172000" />
+    <option name="totallyTimeSpent" value="6390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
@@ -1730,14 +1347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1774,8 +1383,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        <state relative-caret-position="331">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
