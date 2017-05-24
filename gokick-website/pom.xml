@@ -412,6 +412,9 @@
   <profiles>
     <profile>
       <id>devel</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <profile-name>devel</profile-name>
         <jndi-datasource-name>jdbc/gokick</jndi-datasource-name>
@@ -458,4 +461,5 @@
       </build>
     </profile>
   </profiles>
+  <sett
 </project>
