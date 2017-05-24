@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-backoffice/pom.xml" afterPath="$PROJECT_DIR$/gokick-backoffice/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.hbm.xml" afterPath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/gokick-backoffice/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,13 +42,9 @@
       <file leaf-file-name="WakeUpUserManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2407#2408#0" expanded="false" />
-                <element signature="e#2456#2457#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WakeUpUserManagerTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WakeUpUserManagerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -93,13 +93,13 @@
         <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="416" column="19" lean-forward="true" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
+              <caret line="416" column="19" lean-forward="false" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-backoffice/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
@@ -171,11 +171,11 @@
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/enums/EnumEmailConfigurationType.java" />
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/beans/User.java" />
         <option value="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
-        <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-backoffice/pom.xml" />
+        <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
       </list>
     </option>
   </component>
@@ -476,7 +476,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="BeanOjbManagerLong&#9;PSI&#9;JAVA://it.newmedia.database.ojb.managers.BeanOjbManagerLong&#10;BeanOjbManager&#9;PSI&#9;JAVA://it.newmedia.database.ojb.managers.BeanOjbManager" />
+    <property name="SearchEverywhereHistoryKey" value="WakeUpUserManagerTest&#9;FILE&#9;file:///Users/vittorio/Projects/gokick/vaicalcio/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java&#10;BeanOjbManagerLong&#9;PSI&#9;JAVA://it.newmedia.database.ojb.managers.BeanOjbManagerLong&#10;BeanOjbManager&#9;PSI&#9;JAVA://it.newmedia.database.ojb.managers.BeanOjbManager" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -953,12 +953,12 @@
       <workItem from="1495464220104" duration="3676000" />
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
-      <workItem from="1495655014410" duration="2102000" />
+      <workItem from="1495655014410" duration="2223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8048000" />
+    <option name="totallyTimeSpent" value="8169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
@@ -984,7 +984,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962587" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2512235" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1053,6 +1053,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1156#1220#0" expanded="false" />
+            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
+            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
+            <element signature="e#3350#3418#0" expanded="false" />
+            <element signature="e#5767#5838#0" expanded="false" />
+            <element signature="e#8224#8294#0" expanded="false" />
+            <element signature="e#13031#13101#0" expanded="false" />
+            <element signature="e#17513#17580#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,11 +1071,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="65" column="6" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2407#2408#0" expanded="false" />
-            <element signature="e#2456#2457#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,6 +1101,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19290">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,6 +1130,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13530">
           <caret line="1037" column="5" lean-forward="true" selection-start-line="1037" selection-start-column="5" selection-end-line="1037" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1129,6 +1138,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1156#1220#0" expanded="false" />
+            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
+            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
+            <element signature="e#3350#3418#0" expanded="false" />
+            <element signature="e#5767#5838#0" expanded="false" />
+            <element signature="e#8224#8294#0" expanded="false" />
+            <element signature="e#13031#13101#0" expanded="false" />
+            <element signature="e#17513#17580#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,11 +1156,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="65" column="6" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2407#2408#0" expanded="false" />
-            <element signature="e#2456#2457#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,6 +1186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25080">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1184,6 +1201,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,6 +1318,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1156#1220#0" expanded="false" />
+            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
+            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
+            <element signature="e#3350#3418#0" expanded="false" />
+            <element signature="e#5767#5838#0" expanded="false" />
+            <element signature="e#8224#8294#0" expanded="false" />
+            <element signature="e#13031#13101#0" expanded="false" />
+            <element signature="e#17513#17580#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1314,6 +1343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19290">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1335,6 +1365,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1777">
           <caret line="1037" column="5" lean-forward="true" selection-start-line="1037" selection-start-column="5" selection-end-line="1037" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,26 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2407#2408#0" expanded="false" />
-            <element signature="e#2456#2457#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1401,7 +1412,7 @@
     <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="416" column="19" lean-forward="true" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
+          <caret line="416" column="19" lean-forward="false" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1410,6 +1421,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>

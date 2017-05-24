@@ -6,7 +6,7 @@ import org.junit.Test;
 public class WakeUpUserManagerTest
 {
 
-  @Test
+  //@Test
   public void testRun() throws Exception
   {
     WakeUpUserManager wakeUpUserManager = new WakeUpUserManager();
