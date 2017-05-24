@@ -37,51 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadLastPosts }
+     * Create an instance of {@link ReadPostRequest }
      * 
      */
-    public ReadLastPosts createReadLastPosts() {
-        return new ReadLastPosts();
+    public ReadPostRequest createReadPostRequest() {
+        return new ReadPostRequest();
     }
 
     /**
-     * Create an instance of {@link WritePostsResponse }
+     * Create an instance of {@link WritePostRequest }
      * 
      */
-    public WritePostsResponse createWritePostsResponse() {
-        return new WritePostsResponse();
-    }
-
-    /**
-     * Create an instance of {@link WritePosts }
-     * 
-     */
-    public WritePosts createWritePosts() {
-        return new WritePosts();
-    }
-
-    /**
-     * Create an instance of {@link ReadLastPostsResponse }
-     * 
-     */
-    public ReadLastPostsResponse createReadLastPostsResponse() {
-        return new ReadLastPostsResponse();
-    }
-
-    /**
-     * Create an instance of {@link Login }
-     * 
-     */
-    public Login createLogin() {
-        return new Login();
-    }
-
-    /**
-     * Create an instance of {@link WritePostResponse }
-     * 
-     */
-    public WritePostResponse createWritePostResponse() {
-        return new WritePostResponse();
+    public WritePostRequest createWritePostRequest() {
+        return new WritePostRequest();
     }
 
     /**
@@ -101,11 +69,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReadPostRequest }
+     * Create an instance of {@link WritePostResponse }
      * 
      */
-    public ReadPostRequest createReadPostRequest() {
-        return new ReadPostRequest();
+    public WritePostResponse createWritePostResponse() {
+        return new WritePostResponse();
+    }
+
+    /**
+     * Create an instance of {@link WritePostsResponse }
+     * 
+     */
+    public WritePostsResponse createWritePostsResponse() {
+        return new WritePostsResponse();
     }
 
     /**
@@ -117,11 +93,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link WritePostRequest }
+     * Create an instance of {@link ReadLastPostsResponse }
      * 
      */
-    public WritePostRequest createWritePostRequest() {
-        return new WritePostRequest();
+    public ReadLastPostsResponse createReadLastPostsResponse() {
+        return new ReadLastPostsResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReadLastPosts }
+     * 
+     */
+    public ReadLastPosts createReadLastPosts() {
+        return new ReadLastPosts();
+    }
+
+    /**
+     * Create an instance of {@link WritePosts }
+     * 
+     */
+    public WritePosts createWritePosts() {
+        return new WritePosts();
     }
 
     /**
@@ -130,6 +122,14 @@ public class ObjectFactory {
      */
     public WritePostResponseData createWritePostResponseData() {
         return new WritePostResponseData();
+    }
+
+    /**
+     * Create an instance of {@link Login }
+     * 
+     */
+    public Login createLogin() {
+        return new Login();
     }
 
     /**

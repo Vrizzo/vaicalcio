@@ -2,7 +2,6 @@ package it.newmedia.gokick.site.managers.scheduler;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class WakeUpUserManagerTest
 {

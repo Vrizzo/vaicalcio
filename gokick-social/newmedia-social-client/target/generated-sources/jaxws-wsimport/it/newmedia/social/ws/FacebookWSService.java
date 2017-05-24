@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "FacebookWSService", targetNamespace = "http://ws.social.newmedia.it/", wsdlLocation = "/data/personal/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl")
+@WebServiceClient(name = "FacebookWSService", targetNamespace = "http://ws.social.newmedia.it/", wsdlLocation = "/Users/vittorio/Projects/gokick/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl")
 public class FacebookWSService
     extends Service
 {
@@ -30,9 +30,9 @@ public class FacebookWSService
         try {
             URL baseUrl;
             baseUrl = it.newmedia.social.ws.FacebookWSService.class.getResource(".");
-            url = new URL(baseUrl, "/data/personal/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl");
+            url = new URL(baseUrl, "/Users/vittorio/Projects/gokick/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: '/data/personal/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: '/Users/vittorio/Projects/gokick/vaicalcio/gokick-social/newmedia-social-client/src/main/resources/newmedia-social-facebook.wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         FACEBOOKWSSERVICE_WSDL_LOCATION = url;
