@@ -142,8 +142,7 @@ public enum EnumEmailConfigurationType
   PlayMorePartnerNotifyLessThanZero("playMore.lessThanZero"),
 
 
-
-  ;
+  MatchWakeUpUser("");
 
   private String emailConfigurationType;
 

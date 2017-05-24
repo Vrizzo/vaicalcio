@@ -158,8 +158,10 @@ public class User extends ACreatedBean
   private boolean facebookPostOnMatchRecorded;
 
   private String cobrandCode;
+  private Date prevWakeUpEmailSent;
+  private Date alertOnWakeup;
 
-    /**
+  /**
    * @hibernate.id
    * column="ID_USER"
    * generator-class="native"
@@ -1289,4 +1291,23 @@ public class User extends ACreatedBean
   }
 
 
+  public void setPrevWakeUpEmailSent(Date prevWakeUpEmailSent)
+  {
+    this.prevWakeUpEmailSent = prevWakeUpEmailSent;
+  }
+
+  public Date getPrevWakeUpEmailSent()
+  {
+    return prevWakeUpEmailSent;
+  }
+
+  public Date getAlertOnWakeup()
+  {
+    return alertOnWakeup;
+  }
+
+  public void setAlertOnWakeup(Date alertOnWakeup)
+  {
+    this.alertOnWakeup = alertOnWakeup;
+  }
 }

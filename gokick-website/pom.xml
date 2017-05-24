@@ -303,6 +303,8 @@
       <groupId>net.fckeditor</groupId>
       <artifactId>fckeditor</artifactId>
       <version>2.3</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/FCKeditor-2.3.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>commons-fileupload</groupId>
@@ -426,7 +428,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
-            <version>2.1-beta-1</version>
+            <version>2.6</version>
             <configuration>
               <failOnMissingWebXml>false</failOnMissingWebXml>
               <containerConfigXML>src/main/profiles/preview/context.xml</containerConfigXML>
@@ -446,7 +448,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
-            <version>2.1-beta-1</version>
+            <version>2.6</version>
             <configuration>
               <failOnMissingWebXml>false</failOnMissingWebXml>
               <containerConfigXML>src/main/profiles/prod/context.xml</containerConfigXML>

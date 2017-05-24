@@ -219,6 +219,10 @@ public class PlayerDAO extends AGenericDAO<Player, Integer> {
     List results = criteria.list();
     return results.size() > 0 ? (Player)results.get(0) : null;
   }
-  
-  
+
+
+  public List<Integer> findLastUserIsPlayer(Integer id, int i)
+  {
+    return null;
+  }
 }

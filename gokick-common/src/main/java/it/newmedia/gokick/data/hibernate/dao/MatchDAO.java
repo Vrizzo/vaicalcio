@@ -3,6 +3,7 @@ package it.newmedia.gokick.data.hibernate.dao;
 import it.newmedia.gokick.data.enums.EnumPlayerStatus;
 import it.newmedia.gokick.data.enums.EnumPlayerType;
 import it.newmedia.gokick.data.hibernate.AGenericDAO;
+import it.newmedia.gokick.data.hibernate.beans.City;
 import it.newmedia.gokick.data.hibernate.beans.Match;
 import java.util.ArrayList;
 import java.util.Date;
@@ -1173,4 +1174,18 @@ public class MatchDAO extends AGenericDAO<Match, Integer>
     return criteria.list().isEmpty() ? null : (Match) criteria.list().get(0);
   }
 
+  public List<Match> findMatchToPlayByCity(City city)
+  {
+    return null;
+  }
+
+  public List<Integer> lastSportCenterUsed(List<Integer> lastUserIsPlayer)
+  {
+    return null;
+  }
+
+  public List<Match> findMatchToPlayBySportCenter(List<Integer> lastSportCenterUsed)
+  {
+    return null;
+  }
 }

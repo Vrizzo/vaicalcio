@@ -28,13 +28,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ABaseDto")
 @XmlSeeAlso({
-    Login.class,
-    WritePostResponseData.class,
-    ReadPostResponseData.class,
     WritePostRequest.class,
+    WritePostRequestData.class,
     ReadPostRequest.class,
-    AResponse.class,
-    WritePostRequestData.class
+    Login.class,
+    ReadPostResponseData.class,
+    WritePostResponseData.class,
+    AResponse.class
 })
 public abstract class ABaseDto {
 

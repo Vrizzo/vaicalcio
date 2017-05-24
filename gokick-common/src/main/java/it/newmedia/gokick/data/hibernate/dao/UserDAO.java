@@ -974,4 +974,9 @@ public class UserDAO extends AGenericDAO<User, Integer>
   {
     return findEntityByCriteria(Restrictions.eq("email", email));
   }
+
+  public List<User> findUserToWakeUp(int limit)
+  {
+    return null;
+  }
 }

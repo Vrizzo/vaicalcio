@@ -62,6 +62,7 @@ public class WakeUpUserManager implements Runnable
       EmailManager.sendWakeUpMail(user, currentCobrand, match);
 
       User toUpdate = UserManager.getById(user.getId());
+
       toUpdate.setPrevWakeUpEmailSent(new Date());
       DAOFactory.getInstance().getUserDAO().makePersistent(toUpdate);
     }

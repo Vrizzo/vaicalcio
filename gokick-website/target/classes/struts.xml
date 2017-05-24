@@ -260,7 +260,11 @@
       <result name="error">/jsp/errorPopup.jsp</result>
       <result>/jsp/userDetails.jsp</result>
     </action>
-
+    <action name="userDetailsPublic" class="it.newmedia.gokick.site.web.actions.UserDetailsAction">
+      <param name="authenticationRequired">False</param>
+      <result name="error">/jsp/errorPopup.jsp</result>
+      <result>/jsp/publicProfile.jsp</result>
+    </action>
     <!-- ABUSE-->
      <action name="sendAbuseNotify" class="it.newmedia.gokick.site.web.actions.UserDetailsAction" method="sendAbuseNotify">
       <param name="authenticationRequired">True</param>

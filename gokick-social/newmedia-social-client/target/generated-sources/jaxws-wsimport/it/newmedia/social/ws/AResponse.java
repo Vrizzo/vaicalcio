@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
     "success"
 })
 @XmlSeeAlso({
-    WritePostResponse.class,
-    ReadPostResponse.class
+    ReadPostResponse.class,
+    WritePostResponse.class
 })
 public abstract class AResponse
     extends ABaseDto
