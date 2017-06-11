@@ -4,7 +4,7 @@
 
   <!-- APPENDERS -->
   <appender name="application" class="org.apache.log4j.RollingFileAppender" >
-    <param name="File" value="${root-log}social.log"/>
+    <param name="File" value="e:\\ProjectsJava\\Newmedia\\NewmediaServices\\NewmediaSocial\\logs\\social.log"/>
     <param name="Append" value="true" />
     <param name="MaxFileSize" value="1MB"/>
     <param name="MaxBackupIndex" value="10"/>

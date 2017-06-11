@@ -2,12 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/commons-dbcp-1.2.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/commons-pool-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/db-ojb-1.0.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/war/work/webapp-cache.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/FacebookWSService.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/FacebookWSService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/it/newmedia/social/ws/ObjectFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/newmedia-social-client-1.0.1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/classes/it/newmedia/social/facebook/dto/ABaseDto.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/classes/it/newmedia/social/facebook/dto/ABaseDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social.war" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ABaseDto.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ABaseDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/APost.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/APost.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/Login.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostRequest.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostResponse.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostResponseData.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/ReadPostResponseData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostRequest.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostRequestData.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostRequestData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostResponse.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostResponseData.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/dto/WritePostResponseData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/service/impl/FacebookServiceImpl.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/service/impl/FacebookServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/utils/Convert.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/facebook/utils/Convert.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/service/SecurityService.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/service/SecurityService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/ws/FacebookWS.class" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/it/newmedia/social/ws/FacebookWS.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/gokick-library-1.2.4.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/gokick-library-1.2.4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/jsr181-api-1.0-MR1.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/jsr181-api-1.0-MR1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/lib/jsr250-api-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.hbm.xml" afterPath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" afterPath="$PROJECT_DIR$/gokick-backoffice/gokick-backoffice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-common/gokick-common.iml" afterPath="$PROJECT_DIR$/gokick-common/gokick-common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-library/gokick-library.iml" afterPath="$PROJECT_DIR$/gokick-library/gokick-library.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/FacebookWSService.java" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/FacebookWSService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/generated-sources/jaxws-wsimport/it/newmedia/social/ws/ObjectFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/log4j.xml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/newmedia-social/WEB-INF/classes/log4j.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-website/gokick-website.iml" afterPath="$PROJECT_DIR$/gokick-website/gokick-website.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/gokick-backoffice/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,7 +75,7 @@
       <file leaf-file-name="WakeUpUserManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="390">
               <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
@@ -62,18 +95,18 @@
       <file leaf-file-name="WakeUpUserManagerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="195">
+              <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="gokick-website.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gokick-website/gokick-website.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,9 +115,15 @@
       <file leaf-file-name="PlayerDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/dao/PlayerDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2436">
+            <state relative-caret-position="2490">
               <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#749#750#0" expanded="false" />
+                <element signature="e#773#774#0" expanded="false" />
+                <element signature="e#8267#8268#0" expanded="false" />
+                <element signature="e#8288#8289#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,7 +131,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="6240">
               <caret line="416" column="19" lean-forward="false" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
               <folding />
             </state>
@@ -102,7 +141,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-backoffice/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
+            <state relative-caret-position="5865">
               <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
               <folding />
             </state>
@@ -112,7 +151,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="810">
               <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
               <folding />
             </state>
@@ -142,12 +181,12 @@
       <map>
         <entry key="$USER_HOME$/Downloads/salesTaxes-master 5" value="1478359852000" />
         <entry key="$USER_HOME$/Downloads/salestaxes-master" value="1448804698000" />
-        <entry key="$PROJECT_DIR$/../../git-data/codemotion/eurekaserver" value="1447846936000" />
-        <entry key="$PROJECT_DIR$/../../git-data/codemotion/hystrixdashboard" value="1447854012000" />
-        <entry key="$PROJECT_DIR$/../../git-data/codemotion/lab.one" value="1447836984000" />
-        <entry key="$PROJECT_DIR$/../../git-data/codemotion/membership" value="1447839042000" />
-        <entry key="$PROJECT_DIR$/../../git-data/codemotion/recommendations" value="1447841758000" />
-        <entry key="$PROJECT_DIR$/../../git-data/flight-catalog" value="4393790547000" />
+        <entry key="$USER_HOME$/git-data/codemotion/eurekaserver" value="1447846936000" />
+        <entry key="$USER_HOME$/git-data/codemotion/hystrixdashboard" value="1447854012000" />
+        <entry key="$USER_HOME$/git-data/codemotion/lab.one" value="1447836984000" />
+        <entry key="$USER_HOME$/git-data/codemotion/membership" value="1447839042000" />
+        <entry key="$USER_HOME$/git-data/codemotion/recommendations" value="1447841758000" />
+        <entry key="$USER_HOME$/git-data/flight-catalog" value="4393790547000" />
       </map>
     </option>
     <option name="externalProjectsViewState">
@@ -171,11 +210,11 @@
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/enums/EnumEmailConfigurationType.java" />
         <option value="$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/beans/User.java" />
         <option value="$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/gokick-website/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-backoffice/pom.xml" />
         <option value="$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -194,92 +233,6 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="newmedia-social-client" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="newmedia-social-client" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="newmedia-social-client" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="newmedia-social" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="newmedia-social" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="gokick-website" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="gokick-website" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -340,6 +293,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,112 +307,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-backoffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -498,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.gokick-project [clean install]">
+  <component name="RunManager" selected="Maven.gokick-project [clean]">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -933,8 +784,36 @@
       </MavenSettings>
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="gokick-project [clean]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map>
+                <entry key="devel" value="true" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Maven.gokick-project [clean install]" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.gokick-project [clean]" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -954,20 +833,20 @@
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
       <workItem from="1495655014410" duration="2223000" />
+      <workItem from="1497202686222" duration="917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8169000" />
+    <option name="totallyTimeSpent" value="9086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962587" sideWeight="0.50186074" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908028" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898316" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -983,11 +862,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.4981393" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2512235" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25394237" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1025,14 +904,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6615">
-          <caret line="441" column="13" lean-forward="false" selection-start-line="441" selection-start-column="13" selection-end-line="441" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -1053,17 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1156#1220#0" expanded="false" />
-            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
-            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
-            <element signature="e#3350#3418#0" expanded="false" />
-            <element signature="e#5767#5838#0" expanded="false" />
-            <element signature="e#8224#8294#0" expanded="false" />
-            <element signature="e#13031#13101#0" expanded="false" />
-            <element signature="e#17513#17580#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,7 +953,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
           <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#8267#8268#0" expanded="false" />
+            <element signature="e#8288#8289#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19290">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13530">
           <caret line="1037" column="5" lean-forward="true" selection-start-line="1037" selection-start-column="5" selection-end-line="1037" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,17 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1156#1220#0" expanded="false" />
-            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
-            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
-            <element signature="e#3350#3418#0" expanded="false" />
-            <element signature="e#5767#5838#0" expanded="false" />
-            <element signature="e#8224#8294#0" expanded="false" />
-            <element signature="e#13031#13101#0" expanded="false" />
-            <element signature="e#17513#17580#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,7 +1031,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
           <caret line="201" column="40" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#8267#8268#0" expanded="false" />
+            <element signature="e#8288#8289#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,7 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25080">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,17 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16605">
           <caret line="1374" column="80" lean-forward="false" selection-start-line="1374" selection-start-column="80" selection-end-line="1374" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1156#1220#0" expanded="false" />
-            <element signature="n#!!doc;n#logger#0;n#MatchManager#0" expanded="false" />
-            <element signature="n#!!doc;n#MatchManager#0;n#MatchManager#0" expanded="false" />
-            <element signature="e#3350#3418#0" expanded="false" />
-            <element signature="e#5767#5838#0" expanded="false" />
-            <element signature="e#8224#8294#0" expanded="false" />
-            <element signature="e#13031#13101#0" expanded="false" />
-            <element signature="e#17513#17580#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1343,7 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19290">
           <caret line="1672" column="43" lean-forward="false" selection-start-line="1672" selection-start-column="43" selection-end-line="1672" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1365,7 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1777">
           <caret line="1037" column="5" lean-forward="true" selection-start-line="1037" selection-start-column="5" selection-end-line="1037" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,17 +1221,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gokick-social/newmedia-social/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="810">
           <caret line="54" column="24" lean-forward="false" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
           <folding />
         </state>
@@ -1395,9 +1231,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gokick-common/src/main/java/it/newmedia/gokick/data/hibernate/dao/PlayerDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2436">
+        <state relative-caret-position="2490">
           <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#8267#8268#0" expanded="false" />
+            <element signature="e#8288#8289#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1411,7 +1253,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gokick-website/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="6240">
           <caret line="416" column="19" lean-forward="false" selection-start-line="414" selection-start-column="5" selection-end-line="416" selection-end-column="19" />
           <folding />
         </state>
@@ -1419,7 +1261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gokick-backoffice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="5865">
           <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
           <folding />
         </state>
@@ -1427,16 +1269,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gokick-website/src/main/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="390">
           <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gokick-website/gokick-website.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gokick-website/src/test/java/it/newmedia/gokick/site/managers/scheduler/WakeUpUserManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="195">
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
