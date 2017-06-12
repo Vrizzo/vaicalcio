@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/AbuseReason.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Audit.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/City.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Cobrand.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/Country.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/CountryRegion.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gokick-common/target/classes/it/newmedia/gokick/data/hibernate/beans/EmailConfiguration.hbm.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-mobile/pom.xml" afterPath="$PROJECT_DIR$/gokick-mobile/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/jax-ws-catalog.xml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/jax-ws-catalog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/wsdl/newmedia-social-facebook.wsdl" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/wsdl/newmedia-social-facebook.wsdl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/wsdl/newmedia-social-facebook.xsd" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social-client/target/classes/wsdl/newmedia-social-facebook.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-social/newmedia-social/target/classes/log4j.xml" afterPath="$PROJECT_DIR$/gokick-social/newmedia-social/target/classes/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gokick-website/gokick-website.iml" afterPath="$PROJECT_DIR$/gokick-website/gokick-website.iml" />
-    </list>
+    <list default="true" id="7ebc5d62-183d-4596-b96c-cf8e9ea88c63" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/gokick-backoffice/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/gokick-website/target/" />
@@ -88,8 +68,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="67" column="24" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+            <state relative-caret-position="88">
+              <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -473,38 +453,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wrapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vaicalcio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gokick-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1063,12 +1011,12 @@
       <workItem from="1495525620211" duration="1247000" />
       <workItem from="1495653929309" duration="1023000" />
       <workItem from="1495655014410" duration="2223000" />
-      <workItem from="1497202686222" duration="8311000" />
+      <workItem from="1497202686222" duration="8618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16480000" />
+    <option name="totallyTimeSpent" value="16787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1881" height="1058" extended-state="6" />
@@ -1527,8 +1475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="67" column="24" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        <state relative-caret-position="88">
+          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
           <folding />
         </state>
       </provider>
