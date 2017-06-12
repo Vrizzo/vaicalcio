@@ -65,3 +65,7 @@ modules.xml
 # End of https://www.gitignore.io/api/intellij+iml
 /gokick-website/gokick-website.iml
 /gokick-project.iml
+/gokick-website/target/*
+/gokick-mobile/target/*
+/gokick-common/target/*
+/.idea/

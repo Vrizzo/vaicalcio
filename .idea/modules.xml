@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/gokick-library/gokick-library.iml" filepath="$PROJECT_DIR$/gokick-library/gokick-library.iml" />
       <module fileurl="file://$PROJECT_DIR$/gokick-project.iml" filepath="$PROJECT_DIR$/gokick-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/gokick-website/gokick-website.iml" filepath="$PROJECT_DIR$/gokick-website/gokick-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gokick-mobile/mobile.iml" filepath="$PROJECT_DIR$/gokick-mobile/mobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" filepath="$PROJECT_DIR$/gokick-social/newmedia-social/newmedia-social.iml" />
       <module fileurl="file://$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" filepath="$PROJECT_DIR$/gokick-social/newmedia-social-client/newmedia-social-client.iml" />
     </modules>

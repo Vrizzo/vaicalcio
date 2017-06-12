@@ -20,6 +20,7 @@
         <module name="gokick-common" />
         <module name="gokick-library" />
         <module name="gokick-website" />
+        <module name="mobile" />
         <module name="newmedia-social" />
         <module name="newmedia-social-client" />
       </profile>
@@ -30,6 +31,7 @@
       <module name="gokick-library" target="1.6" />
       <module name="gokick-project" target="1.5" />
       <module name="gokick-website" target="1.6" />
+      <module name="mobile" target="1.8" />
       <module name="newmedia-social" target="1.6" />
       <module name="newmedia-social-client" target="1.6" />
     </bytecodeTargetLevel>
